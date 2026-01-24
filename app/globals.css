@@ -70,9 +70,9 @@
    LIGHT THEME
    ============================================ */
 [data-theme='light'] {
-  /* Primary Colors (same, but different usage) */
+  /* Primary Colors (adjusted for light backgrounds) */
   --primary-navy: #0A1628;
-  --primary-black: #000000;
+  --primary-black: #1A1A1A;
   --primary-cyan: #0066CC;
   --electric-blue: #0052CC;
   --cyan-light: #0073E6;
@@ -80,40 +80,40 @@
   --coral-orange: #FF6B35;
   --neutral-white: #FFFFFF;
   
-  /* Background Colors */
+  /* Background Colors - soft, clean gradients */
   --bg-primary: #FFFFFF;
-  --bg-secondary: #F5F5F5;
-  --bg-tertiary: #E8E8E8;
-  --bg-hero: linear-gradient(135deg, #F0F4F8 0%, #E8F0F8 50%, #F0F4F8 100%);
-  --bg-hero-container: linear-gradient(135deg, #F0F4F8 0%, #E8F0F8 50%, #F0F4F8 100%);
+  --bg-secondary: #F8FAFB;
+  --bg-tertiary: #EDF2F7;
+  --bg-hero: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0F9FF 100%);
+  --bg-hero-container: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0F9FF 100%);
   
-  /* Text Colors */
-  --text-primary: #1A1A1A;
-  --text-secondary: #333333;
-  --text-tertiary: #666666;
-  --text-muted: #999999;
+  /* Text Colors - high contrast for readability */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-tertiary: #64748B;
+  --text-muted: #94A3B8;
   
-  /* Border Colors */
-  --border-primary: rgba(0, 0, 0, 0.1);
-  --border-secondary: rgba(0, 0, 0, 0.2);
-  --border-accent: rgba(0, 102, 204, 0.3);
+  /* Border Colors - subtle but visible */
+  --border-primary: rgba(15, 23, 42, 0.08);
+  --border-secondary: rgba(15, 23, 42, 0.12);
+  --border-accent: rgba(0, 102, 204, 0.25);
   
-  /* Glassmorphism (lighter for light theme) */
-  --glass-bg: rgba(0, 0, 0, 0.03);
-  --glass-bg-hover: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.1);
+  /* Glassmorphism - frosted glass effect */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.1);
   
-  /* Neon Glow Colors (more subtle in light theme) */
-  --glow-cyan-primary: rgba(0, 102, 204, 0.4);
-  --glow-cyan-secondary: rgba(0, 102, 204, 0.3);
-  --glow-cyan-tertiary: rgba(0, 102, 204, 0.2);
-  --glow-blue: rgba(0, 82, 204, 0.4);
-  --glow-orange: rgba(230, 81, 0, 0.4);
+  /* Neon Glow Colors - vivid but refined for light */
+  --glow-cyan-primary: rgba(0, 102, 204, 0.35);
+  --glow-cyan-secondary: rgba(0, 102, 204, 0.25);
+  --glow-cyan-tertiary: rgba(0, 102, 204, 0.15);
+  --glow-blue: rgba(0, 82, 204, 0.35);
+  --glow-orange: rgba(230, 81, 0, 0.35);
   
-  /* Animated Background (more subtle in light theme) */
-  --orb-opacity: 0.15;
-  --streak-opacity: 0.3;
-  --streak-bright-opacity: 0.4;
+  /* Animated Background - visible but not overwhelming */
+  --orb-opacity: 0.2;
+  --streak-opacity: 0.4;
+  --streak-bright-opacity: 0.5;
 }
 
 * {
@@ -260,7 +260,13 @@ body {
   animation: float 15s ease-in-out infinite;
   pointer-events: none;
   z-index: 2;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Light theme: adjust orb blur and colors */
+[data-theme='light'] .glow-orb {
+  filter: blur(100px);
+  opacity: calc(var(--orb-opacity) * 0.8);
 }
 
 /* ============================================
@@ -391,6 +397,56 @@ body {
 }
 
 /* ============================================
+   LIGHT THEME GLASSMORPHISM OVERRIDES
+   ============================================ */
+[data-theme='light'] .glass-badge {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 102, 204, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(0, 102, 204, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme='light'] .glass-badge:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 102, 204, 0.4);
+  box-shadow: 
+    0 6px 20px rgba(0, 102, 204, 0.15),
+    0 8px 30px rgba(0, 102, 204, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='light'] .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .glass-card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    0 4px 15px rgba(0, 102, 204, 0.1);
+}
+
+[data-theme='light'] .glass-badge-small {
+  background: rgba(0, 102, 204, 0.08);
+  border: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+[data-theme='light'] .glass-floating-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .glass-floating-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
    GLOW EFFECTS FOR GLASS ELEMENTS
    ============================================ */
 .glow-cyan-soft {
@@ -416,6 +472,34 @@ body {
     0 0 30px rgba(0, 163, 255, 0.3),
     0 0 60px rgba(255, 107, 53, 0.2),
     0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   LIGHT THEME GLOW EFFECTS
+   ============================================ */
+[data-theme='light'] .glow-cyan-soft {
+  box-shadow: 
+    0 4px 16px rgba(0, 102, 204, 0.15),
+    0 0 24px rgba(0, 102, 204, 0.1);
+}
+
+[data-theme='light'] .glow-orange-soft {
+  box-shadow: 
+    0 4px 16px rgba(230, 81, 0, 0.15),
+    0 0 24px rgba(230, 81, 0, 0.1);
+}
+
+[data-theme='light'] .glow-gold-soft {
+  box-shadow: 
+    0 4px 16px rgba(255, 193, 7, 0.15),
+    0 0 24px rgba(255, 193, 7, 0.1);
+}
+
+[data-theme='light'] .shadow-neon-multi {
+  box-shadow: 
+    0 0 25px rgba(0, 102, 204, 0.15),
+    0 0 40px rgba(230, 81, 0, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 /* ============================================
@@ -528,4 +612,22 @@ body {
   .border-theme-accent {
     border-color: var(--border-accent);
   }
+}
+
+/* ============================================
+   LIGHT THEME UTILITY OVERRIDES
+   ============================================ */
+[data-theme='light'] .glass-morphism {
+  background: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.2), 0 0 40px rgba(0, 102, 204, 0.08);
+}
+
+[data-theme='light'] .glow-orange {
+  box-shadow: 0 0 20px rgba(230, 81, 0, 0.2), 0 0 40px rgba(230, 81, 0, 0.08);
 }

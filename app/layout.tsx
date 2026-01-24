@@ -12,20 +12,20 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Velocrux - Automate Your AI Workflows',
-  description: 'Supercharge your AI workflows with intelligent automation. Connect your favorite apps and let AI handle the rest.',
-  keywords: ['AI', 'automation', 'workflow', 'AI agents', 'productivity'],
+  title: 'Velocrux - Innovative Software Lab | AI Solutions, Products & Services',
+  description: 'Leading software lab specializing in AI development, custom products, and digital services. Transform your ideas into powerful solutions.',
+  keywords: ['software lab', 'AI development', 'custom software', 'product development', 'digital services', 'machine learning', 'web development', 'mobile apps'],
   authors: [{ name: 'Velocrux' }],
   openGraph: {
-    title: 'Velocrux - Automate Your AI Workflows',
-    description: 'Supercharge your AI workflows with intelligent automation.',
+    title: 'Velocrux - Innovative Software Lab',
+    description: 'AI Solutions, Products & Custom Services for modern businesses.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Velocrux - Automate Your AI Workflows',
-    description: 'Supercharge your AI workflows with intelligent automation.',
+    title: 'Velocrux - Innovative Software Lab',
+    description: 'AI Solutions, Products & Custom Services for modern businesses.',
   },
 }
 

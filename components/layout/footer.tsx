@@ -9,30 +9,30 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: 'Main Page',
+      title: 'Services',
       links: [
-        { title: 'Home', href: '/' },
-        { title: 'About', href: '/about' },
-        { title: 'Pricing', href: '/pricing' },
+        { title: 'AI Solutions', href: '/ai-solutions' },
+        { title: 'Product Development', href: '/products' },
+        { title: 'Custom Services', href: '/services' },
+        { title: 'Consulting', href: '/consulting' },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        { title: 'About Us', href: '/about' },
+        { title: 'Our Work', href: '/portfolio' },
+        { title: 'Careers', href: '/careers' },
         { title: 'Contact', href: '/contact' },
       ],
     },
     {
-      title: 'Quick Links',
+      title: 'Resources',
       links: [
-        { title: 'Integration', href: '/integration' },
-        { title: 'Teams', href: '/teams' },
-        { title: 'Career', href: '/career' },
-        { title: 'FAQ', href: '/faq' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { title: 'Privacy Policy', href: '/privacy' },
-        { title: 'Terms & Conditions', href: '/terms' },
-        { title: 'Waitlist', href: '/waitlist' },
-        { title: 'Changelog', href: '/changelog' },
+        { title: 'Case Studies', href: '/case-studies' },
+        { title: 'Tech Blog', href: '/blog' },
+        { title: 'Documentation', href: '/docs' },
+        { title: 'Support', href: '/support' },
       ],
     },
   ]

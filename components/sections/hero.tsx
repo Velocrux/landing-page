@@ -18,7 +18,7 @@ export function Hero() {
   const [dynamicStreaks, setDynamicStreaks] = useState<DynamicStreak[]>([])
   const { scrollY } = useScroll()
   const backgroundRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  // const videoRef = useRef<HTMLVideoElement>(null)
 
   // Generate dynamic light streaks on mount
   useEffect(() => {
@@ -54,21 +54,21 @@ export function Hero() {
   }, [scrollY])
 
   // Ensure video plays
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((error) => {
-        // Autoplay may be blocked by browser, this is expected
-        console.log('Video autoplay prevented:', error)
-      })
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.play().catch((error) => {
+  //       // Autoplay may be blocked by browser, this is expected
+  //       console.log('Video autoplay prevented:', error)
+  //     })
+  //   }
+  // }, [])
 
   return (
     <section className="hero-container">
       {/* Animated Background Container */}
       <div ref={backgroundRef} className="background-container">
         {/* Background Video */}
-        <video
+        {/* <video
           ref={videoRef}
           className="hero-background-video"
           autoPlay
@@ -80,10 +80,10 @@ export function Hero() {
         >
           <source src="/Bax1SXv4b9QI33bMvkicABKnI (1).mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
 
         {/* Video Overlay for text readability */}
-        <div className="hero-video-overlay" />
+        {/* <div className="hero-video-overlay" /> */}
 
         {/* Glowing Orbs */}
         <div 
@@ -146,7 +146,7 @@ export function Hero() {
             <FadeIn delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 rounded-full glass-badge mb-8">
                 <span className="text-sm text-primary-cyan font-medium uppercase tracking-wider">
-                  Supercharge Your AI Workflows
+                  Innovative Software Lab
                 </span>
               </div>
             </FadeIn>
@@ -154,17 +154,17 @@ export function Hero() {
             {/* Main Heading */}
             <FadeIn delay={0.2}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                Automate Your AI Workflows
+                AI Solutions, Products
                 <br />
-                <span className="text-gradient">with AI Agent</span>
+                <span className="text-gradient">& Custom Services</span>
               </h1>
             </FadeIn>
 
             {/* Subheading */}
             <FadeIn delay={0.3}>
               <p className="text-lg md:text-xl text-theme-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                Connect your favorite apps, set triggers and watch AI handle the
-                rest - no coding required. Get up and running in minutes.
+                From cutting-edge AI development to custom software solutions, 
+                we transform ideas into powerful digital experiences that drive business growth.
               </p>
             </FadeIn>
 
@@ -172,10 +172,10 @@ export function Hero() {
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <Button variant="primary" size="xl">
-                  Get Started - Free
+                  Explore Our Work
                 </Button>
                 <Button variant="secondary" size="xl">
-                  View Pricing
+                  Start Your Project
                 </Button>
               </div>
             </FadeIn>
@@ -183,29 +183,28 @@ export function Hero() {
             {/* Trust Badge */}
             <FadeIn delay={0.5}>
               <p className="text-sm text-theme-tertiary mb-12">
-                Trusted by 150,000+ users worldwide
+                Trusted by startups and enterprises worldwide
               </p>
             </FadeIn>
 
             {/* Dashboard Mockup with Floating Elements & Glassmorphism */}
-            <FadeIn delay={0.6}>
+            {/* <FadeIn delay={0.6}>
               <div className="relative mt-16">
                 <div className="relative rounded-2xl overflow-hidden glass-card shadow-neon-multi p-1">
                   <div className="aspect-video rounded-xl bg-theme-tertiary/30 backdrop-blur-xl p-8 flex items-center justify-center border border-theme-primary">
                     <div className="text-center">
                       <div className="inline-block px-6 py-3 rounded-lg glass-badge-small">
                         <p className="text-primary-cyan font-semibold">
-                          GPT 4.5 • Chat
+                          AI • Products • Services
                         </p>
                       </div>
                       <p className="text-theme-secondary">
-                        Dashboard Preview
+                        Our Digital Solutions
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Floating UI Elements with Glassmorphism */}
                 <FloatAnimation
                   duration={3}
                   delay={0}
@@ -213,7 +212,7 @@ export function Hero() {
                   className="absolute -top-8 -left-8 hidden lg:block"
                 >
                   <div className="glass-floating-card glow-cyan-soft">
-                    <p className="text-sm font-medium">Launch Workflow</p>
+                    <p className="text-sm font-medium">Custom Development</p>
                   </div>
                 </FloatAnimation>
 
@@ -224,7 +223,7 @@ export function Hero() {
                   className="absolute -top-4 -right-8 hidden lg:block"
                 >
                   <div className="glass-floating-card glow-orange-soft">
-                    <p className="text-sm font-medium">Data Analysis</p>
+                    <p className="text-sm font-medium">AI Integration</p>
                   </div>
                 </FloatAnimation>
 
@@ -235,11 +234,11 @@ export function Hero() {
                   className="absolute -bottom-6 left-1/4 hidden md:block"
                 >
                   <div className="glass-floating-card glow-gold-soft">
-                    <p className="text-sm font-medium">AI Powered</p>
+                    <p className="text-sm font-medium">Product Innovation</p>
                   </div>
                 </FloatAnimation>
               </div>
-            </FadeIn>
+            </FadeIn> */}
           </div>
         </div>
       </div>

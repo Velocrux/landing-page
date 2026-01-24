@@ -5,39 +5,39 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Target, Users, Lightbulb, Heart } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us - Velocrux',
-  description: 'Learn about our mission to revolutionize AI automation and empower businesses worldwide.',
+  title: 'About Us - Velocrux Software Lab',
+  description: 'Learn about our mission to innovate through AI development, custom products, and digital services.',
 }
 
 const team = [
-  { name: 'Sarah Johnson', title: 'CEO & Founder', avatar: '👩‍💼' },
-  { name: 'Michael Chen', title: 'CTO', avatar: '👨‍💻' },
-  { name: 'Emma Williams', title: 'Head of Product', avatar: '👩‍💻' },
-  { name: 'David Martinez', title: 'Head of Engineering', avatar: '👨‍🔧' },
-  { name: 'Lisa Anderson', title: 'Head of Design', avatar: '👩‍🎨' },
-  { name: 'James Wilson', title: 'Head of Marketing', avatar: '👨‍💼' },
+  { name: 'Alex Rodriguez', title: 'Founder & CEO', avatar: '👨‍💼' },
+  { name: 'Dr. Sarah Kim', title: 'Head of AI Research', avatar: '👩‍🔬' },
+  { name: 'Michael Chen', title: 'Lead Software Architect', avatar: '👨‍💻' },
+  { name: 'Emma Thompson', title: 'Product Innovation Director', avatar: '👩‍💻' },
+  { name: 'David Martinez', title: 'Engineering Manager', avatar: '👨‍🔧' },
+  { name: 'Lisa Park', title: 'UX/UI Design Lead', avatar: '👩‍🎨' },
 ]
 
 const values = [
   {
     icon: Target,
-    title: 'Innovation First',
-    description: 'We push boundaries and embrace cutting-edge technologies to deliver the best AI automation solutions.',
+    title: 'Innovation Excellence',
+    description: 'We push technological boundaries to create breakthrough AI solutions and cutting-edge software products.',
   },
   {
     icon: Users,
-    title: 'Customer Success',
-    description: 'Our customers\' success is our success. We\'re committed to providing exceptional support and value.',
+    title: 'Client Partnership',
+    description: 'We collaborate closely with clients, understanding their vision and delivering solutions that exceed expectations.',
   },
   {
     icon: Lightbulb,
-    title: 'Continuous Learning',
-    description: 'We foster a culture of growth, encouraging our team to learn, experiment, and innovate daily.',
+    title: 'Research & Development',
+    description: 'We invest heavily in R&D, exploring emerging technologies and developing proprietary solutions.',
   },
   {
     icon: Heart,
-    title: 'Transparency',
-    description: 'We believe in open communication, honest feedback, and building trust with our users and team.',
+    title: 'Quality Craftsmanship',
+    description: 'We take pride in writing clean code, building robust systems, and delivering products that stand the test of time.',
   },
 ]
 
@@ -49,12 +49,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <FadeIn className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Building the future of
+              Pioneering the future of
               <br />
-              <span className="text-gradient">AI automation</span>
+              <span className="text-gradient">Software Innovation</span>
             </h1>
-            <p className="text-xl text-neutral-light-gray leading-relaxed">
-              Velocrux was founded with a simple mission: to make powerful AI automation accessible to everyone, from startups to enterprises.
+            <p className="text-xl text-theme-secondary leading-relaxed">
+              Velocrux is a cutting-edge software lab dedicated to transforming ideas into powerful digital solutions through AI, custom development, and innovative services.
             </p>
           </FadeIn>
         </div>
@@ -67,15 +67,15 @@ export default function AboutPage() {
             <FadeIn direction="left">
               <div>
                 <h2 className="text-4xl font-bold mb-6">Our Story</h2>
-                <div className="space-y-4 text-neutral-light-gray leading-relaxed">
+                <div className="space-y-4 text-theme-secondary leading-relaxed">
                   <p>
-                    Founded in 2024, Velocrux emerged from a simple observation: businesses were drowning in repetitive tasks while AI technology sat on the sidelines.
+                    Founded by a team of passionate technologists, Velocrux emerged from the vision to create a software lab that bridges the gap between cutting-edge technology and real-world business needs.
                   </p>
                   <p>
-                    Our founders, a team of engineers and product experts, saw an opportunity to bridge this gap. They envisioned a platform that could harness the power of AI without requiring technical expertise.
+                    We specialize in three core areas: AI development for intelligent solutions, custom product development for unique business requirements, and comprehensive digital services that support growth and innovation.
                   </p>
                   <p>
-                    Today, we serve over 150,000 users worldwide, helping them automate workflows, boost productivity, and focus on what truly matters—growing their businesses.
+                    Today, we partner with startups, enterprises, and organizations worldwide, delivering solutions that drive digital transformation and create lasting competitive advantages.
                   </p>
                 </div>
               </div>

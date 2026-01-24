@@ -1,6 +1,6 @@
 'use client'
 
-import { Zap, Globe, Workflow, MessageSquare } from 'lucide-react'
+import { Zap, Brain, Code, Rocket } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { FadeIn } from '@/components/animations/fade-in'
 import { StaggerContainer, staggerItem } from '@/components/animations/stagger-container'
@@ -9,31 +9,31 @@ import { motion } from 'framer-motion'
 
 const features = [
   {
-    icon: Globe,
-    title: 'Seamless Integrations',
+    icon: Brain,
+    title: 'AI Development',
     description:
-      'Integrate Slack, HubSpot, Zendesk & more—automate data flow instantly.',
+      'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your needs.',
     color: 'cyan' as const,
   },
   {
-    icon: MessageSquare,
-    title: 'Conversational Actions',
+    icon: Code,
+    title: 'Product Development',
     description:
-      'Create records, assign tasks & queue emails with a simple prompt in seconds flat.',
+      'Full-stack web and mobile applications built with cutting-edge technologies and best practices.',
     color: 'orange' as const,
   },
   {
-    icon: Workflow,
-    title: 'Visual Workflow Designer',
+    icon: Rocket,
+    title: 'Digital Services',
     description:
-      'Drag & drop AI actions to build workflows visually— no coding required.',
+      'Consulting, system architecture, cloud deployment, and ongoing technical support.',
     color: 'cyan' as const,
   },
   {
     icon: Zap,
-    title: 'Multi‑Channel Automation',
+    title: 'Innovation Lab',
     description:
-      'Trigger email, SMS & chat messages automatically on schedule.',
+      'Research and development of emerging technologies, prototyping, and proof-of-concept solutions.',
     color: 'orange' as const,
   },
 ]
@@ -44,16 +44,16 @@ export function Features() {
       <div className="container mx-auto px-4">
         <FadeIn className="text-center mb-16">
           <p className="text-primary-cyan font-semibold mb-4 uppercase tracking-wider text-sm">
-            AI-Driven Features
+            Our Core Capabilities
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Build, scale and manage
+            From Concept to
             <br />
-            <span className="text-white">entire AI workforce</span>
+            <span className="text-gradient">Digital Reality</span>
           </h2>
-          <p className="text-neutral-light-gray text-lg max-w-2xl mx-auto">
-            Velocrux helps you tackle data bottlenecks, streamline analysis, and
-            make smarter decisions with ease.
+          <p className="text-theme-secondary text-lg max-w-2xl mx-auto">
+            Velocrux combines deep technical expertise with innovative thinking to deliver 
+            solutions that transform businesses and drive growth.
           </p>
         </FadeIn>
 

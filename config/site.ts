@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Velocrux',
-  description: 'Automate Your AI Workflows with AI Agent',
+  description: 'Innovative Software Lab - AI Solutions, Product Development & Custom Services',
   url: 'https://velocrux.com',
   ogImage: 'https://velocrux.com/og.jpg',
   links: {
@@ -14,12 +14,20 @@ export const siteConfig = {
       href: '/',
     },
     {
-      title: 'About',
-      href: '/about',
+      title: 'Products',
+      href: '/products',
     },
     {
-      title: 'Pricing',
-      href: '/pricing',
+      title: 'Services',
+      href: '/services',
+    },
+    {
+      title: 'AI Solutions',
+      href: '/ai-solutions',
+    },
+    {
+      title: 'About',
+      href: '/about',
     },
     {
       title: 'Contact',
