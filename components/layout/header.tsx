@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { siteConfig } from '@/config/site'
 import { useScroll } from '@/hooks/use-scroll'
 import { cn } from '@/lib/utils'
@@ -17,10 +18,10 @@ export function Header() {
   return (
     <>
       <header
-        className={cn(
+          className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
-            ? 'bg-primary-navy/90 backdrop-blur-lg border-b border-white/10 shadow-lg'
+            ? 'bg-theme-primary/90 backdrop-blur-lg border-b border-theme-primary shadow-lg'
             : 'bg-transparent'
         )}
       >
@@ -39,7 +40,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-neutral-light-gray hover:text-white transition-colors relative group"
+                  className="text-theme-secondary hover:text-theme-primary transition-colors relative group"
                 >
                   {item.title}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-accent group-hover:w-full transition-all duration-300" />
@@ -47,8 +48,9 @@ export function Header() {
               ))}
             </nav>
 
-            {/* CTA Button */}
+            {/* CTA Button & Theme Toggle */}
             <div className="hidden md:flex items-center space-x-4">
+              <ThemeToggle variant="icon" />
               <Button variant="secondary" size="md">
                 Get Started
               </Button>

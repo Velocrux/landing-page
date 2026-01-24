@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { siteConfig } from '@/config/site'
 
 interface MobileMenuProps {
@@ -30,7 +31,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-primary-navy-light border-l border-white/10 z-50 md:hidden overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-theme-secondary border-l border-theme-primary z-50 md:hidden overflow-y-auto"
           >
             <div className="p-6">
               {/* Logo */}
@@ -56,7 +57,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className="block px-4 py-3 rounded-lg text-neutral-light-gray hover:text-white hover:bg-white/5 transition-all"
+                      className="block px-4 py-3 rounded-lg text-theme-secondary hover:text-theme-primary hover:bg-theme-tertiary/20 transition-all"
                     >
                       {item.title}
                     </Link>
@@ -64,11 +65,21 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 ))}
               </nav>
 
-              {/* CTA Buttons */}
+              {/* Theme Toggle */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
+                className="mb-3"
+              >
+                <ThemeToggle variant="minimal" className="w-full justify-center" />
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
                 className="space-y-3"
               >
                 <Button variant="primary" size="lg" className="w-full">

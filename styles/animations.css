@@ -1,4 +1,90 @@
-/* Custom Keyframe Animations */
+/* ============================================
+   CUSTOM KEYFRAME ANIMATIONS
+   Production-ready animations for hero section
+   ============================================ */
+
+/* ============================================
+   MOVE STREAK ANIMATION
+   Diagonal movement for light streaks
+   ============================================ */
+@keyframes moveStreak {
+  0% {
+    transform: rotate(45deg) translateX(-200%) translateY(-100%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(200%) translateY(100%);
+  }
+}
+
+/* ============================================
+   FLOAT ANIMATION
+   Floating effect for glowing orbs
+   ============================================ */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+}
+
+/* ============================================
+   GLOW PULSE ANIMATION
+   Subtle pulsing effect for neon lines
+   Duration: 10s for slow, smooth animation
+   ============================================ */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.8;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(1.5px);
+  }
+}
+
+/* ============================================
+   NEON LINE FADE-IN ANIMATION
+   Initial appearance animation for neon lines
+   ============================================ */
+@keyframes neonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   STANDARD GLOW ANIMATIONS
+   For background elements and cards
+   ============================================ */
+@keyframes animate-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 163, 255, 0.5), 0 0 40px rgba(0, 163, 255, 0.3);
+    opacity: 0.6;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 163, 255, 0.8), 0 0 80px rgba(0, 163, 255, 0.5);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slow-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes glow-pulse {
   0%, 100% {
@@ -18,15 +104,10 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
+/* ============================================
+   FLOATING ANIMATIONS
+   For floating UI elements and glowing orbs
+   ============================================ */
 @keyframes float-slow {
   0%, 100% {
     transform: translateY(0);
@@ -36,6 +117,10 @@
   }
 }
 
+/* ============================================
+   UTILITY ANIMATIONS
+   Shimmer, gradient rotation, slide effects
+   ============================================ */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -90,9 +175,20 @@
   }
 }
 
-/* Utility Classes */
+/* ============================================
+   UTILITY ANIMATION CLASSES
+   Pre-configured animation classes
+   ============================================ */
+.animate-glow-pulse {
+  animation: animate-glow-pulse 3s ease-in-out infinite;
+}
+
 .animate-glow-pulse-orange {
-  animation: glow-pulse-orange 2s ease-in-out infinite;
+  animation: glow-pulse-orange 3s ease-in-out infinite;
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 6s ease-in-out infinite;
 }
 
 .animate-float-slow {
@@ -118,4 +214,18 @@
 
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Enable GPU acceleration for animations */
+.neon-line,
+.glass-badge,
+.glass-card,
+.glass-floating-card {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

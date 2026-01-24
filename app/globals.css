@@ -4,11 +4,116 @@
 
 @import '../styles/animations.css';
 
+/* ============================================
+   CSS CUSTOM PROPERTIES FOR EASY THEMING
+   ============================================ */
 :root {
+  /* Viewport Settings */
+  --hero-height: 100vh;
+  --line-width: 150vw;
+  --line-height: 2px;
+  --line-rotation: 50deg;
+}
+
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
+:root,
+[data-theme='dark'] {
+  /* Primary Colors */
   --primary-navy: #0A1628;
+  --primary-black: #000000;
   --primary-cyan: #00A3FF;
+  --electric-blue: #0D7FFF;
+  --cyan-light: #1E90FF;
   --accent-orange: #FF6B35;
+  --coral-orange: #FF7F50;
   --neutral-white: #FFFFFF;
+  
+  /* Background Colors */
+  --bg-primary: #0A1628;
+  --bg-secondary: #1A2332;
+  --bg-tertiary: #2A2A2A;
+  --bg-hero: linear-gradient(135deg, #000000 0%, #0a0a1a 50%, #000000 100%);
+  --bg-hero-container: linear-gradient(135deg, #000000 0%, #0a0a1a 50%, #000000 100%);
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E8E8E8;
+  --text-tertiary: #999999;
+  --text-muted: #808080;
+  
+  /* Border Colors */
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-secondary: rgba(255, 255, 255, 0.2);
+  --border-accent: rgba(0, 163, 255, 0.3);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Neon Glow Colors */
+  --glow-cyan-primary: rgba(0, 163, 255, 0.8);
+  --glow-cyan-secondary: rgba(0, 163, 255, 0.5);
+  --glow-cyan-tertiary: rgba(0, 163, 255, 0.3);
+  --glow-blue: rgba(13, 127, 255, 0.8);
+  --glow-orange: rgba(255, 107, 53, 0.8);
+  
+  /* Animated Background */
+  --orb-opacity: 0.4;
+  --streak-opacity: 0.7;
+  --streak-bright-opacity: 0.9;
+}
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+[data-theme='light'] {
+  /* Primary Colors (same, but different usage) */
+  --primary-navy: #0A1628;
+  --primary-black: #000000;
+  --primary-cyan: #0066CC;
+  --electric-blue: #0052CC;
+  --cyan-light: #0073E6;
+  --accent-orange: #E65100;
+  --coral-orange: #FF6B35;
+  --neutral-white: #FFFFFF;
+  
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F5;
+  --bg-tertiary: #E8E8E8;
+  --bg-hero: linear-gradient(135deg, #F0F4F8 0%, #E8F0F8 50%, #F0F4F8 100%);
+  --bg-hero-container: linear-gradient(135deg, #F0F4F8 0%, #E8F0F8 50%, #F0F4F8 100%);
+  
+  /* Text Colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+  --text-muted: #999999;
+  
+  /* Border Colors */
+  --border-primary: rgba(0, 0, 0, 0.1);
+  --border-secondary: rgba(0, 0, 0, 0.2);
+  --border-accent: rgba(0, 102, 204, 0.3);
+  
+  /* Glassmorphism (lighter for light theme) */
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-bg-hover: rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  
+  /* Neon Glow Colors (more subtle in light theme) */
+  --glow-cyan-primary: rgba(0, 102, 204, 0.4);
+  --glow-cyan-secondary: rgba(0, 102, 204, 0.3);
+  --glow-cyan-tertiary: rgba(0, 102, 204, 0.2);
+  --glow-blue: rgba(0, 82, 204, 0.4);
+  --glow-orange: rgba(230, 81, 0, 0.4);
+  
+  /* Animated Background (more subtle in light theme) */
+  --orb-opacity: 0.15;
+  --streak-opacity: 0.3;
+  --streak-bright-opacity: 0.4;
 }
 
 * {
@@ -22,13 +127,348 @@ html {
 }
 
 body {
-  background-color: var(--primary-navy);
-  color: var(--neutral-white);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ============================================
+   HERO CONTAINER
+   ============================================ */
+.hero-container {
+  /* Theme-aware gradient background */
+  background: var(--bg-hero);
+  
+  /* Full viewport height */
+  min-height: var(--hero-height);
+  
+  /* Positioning context for absolute children */
+  position: relative;
+  
+  /* Contain background elements */
+  overflow: hidden;
+  
+  /* Flexbox for content centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Smooth theme transition */
+  transition: background 0.3s ease;
+}
+
+/* ============================================
+   ANIMATED BACKGROUND CONTAINER
+   ============================================ */
+.background-container {
+  /* Absolute positioning within hero container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Behind content but within hero */
+  z-index: 0;
+  
+  /* Theme-aware gradient background */
+  background: var(--bg-hero-container);
+  
+  /* Contain animated elements */
+  overflow: hidden;
+  
+  /* Smooth transitions for parallax and theme */
+  transition: transform 0.1s ease-out, background 0.3s ease;
+  will-change: transform;
+}
+
+/* ============================================
+   HERO BACKGROUND VIDEO
+   ============================================ */
+.hero-background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure video covers full area on all screen sizes */
+@media (min-aspect-ratio: 16/9) {
+  .hero-background-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .hero-background-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* ============================================
+   VIDEO OVERLAY
+   Dark overlay to ensure text readability
+   ============================================ */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(10, 22, 40, 0.5) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+/* Light theme overlay adjustment */
+[data-theme='light'] .hero-video-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(240, 244, 248, 0.4) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+/* ============================================
+   GLOWING ORBS
+   Floating background orbs with blur
+   ============================================ */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: var(--orb-opacity);
+  animation: float 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+/* ============================================
+   MOVING LIGHT STREAKS
+   Diagonal animated streaks
+   ============================================ */
+.light-streak {
+  position: absolute;
+  width: 2px;
+  height: 150%;
+  
+  /* Blue gradient by default */
+  background: linear-gradient(180deg, transparent 0%, #3B82F6 50%, transparent 100%);
+  
+  /* Subtle blur for glow effect */
+  filter: blur(2px);
+  opacity: var(--streak-opacity);
+  
+  /* Diagonal orientation */
+  transform: rotate(45deg);
+  
+  /* Animated movement */
+  animation: moveStreak 8s linear infinite;
+  
+  /* Non-interactive */
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+/* Light theme: adjust streak colors */
+[data-theme='light'] .light-streak {
+  background: linear-gradient(180deg, transparent 0%, #0066CC 50%, transparent 100%);
+}
+
+[data-theme='light'] .light-streak.orange {
+  background: linear-gradient(180deg, transparent 0%, #E65100 50%, transparent 100%);
+}
+
+/* Orange variant */
+.light-streak.orange {
+  background: linear-gradient(180deg, transparent 0%, #F97316 50%, transparent 100%);
+  animation-duration: 10s;
+}
+
+/* Bright variant */
+.light-streak.bright {
+  filter: blur(4px);
+  opacity: var(--streak-bright-opacity);
+  width: 3px;
+}
+
+/* ============================================
+   HERO CONTENT WRAPPER
+   ============================================ */
+.hero-content {
+  /* Position above neon lines */
+  position: relative;
+  z-index: 10;
+  
+  /* Full width */
+  width: 100%;
+}
+
+/* ============================================
+   GLASSMORPHISM EFFECTS
+   ============================================ */
+
+/* Glass Badge - Main CTA badge */
+.glass-badge {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-accent);
+  box-shadow: 
+    0 4px 16px var(--glow-cyan-tertiary),
+    inset 0 1px 1px var(--border-primary);
+  transition: all 0.3s ease;
+}
+
+.glass-badge:hover {
+  background: var(--glass-bg-hover);
+  border: 1px solid var(--glow-cyan-primary);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px var(--glow-cyan-secondary),
+    inset 0 1px 1px var(--border-secondary);
+}
+
+/* Glass Card - Dashboard mockup */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: var(--glass-bg-hover);
+  border: 1px solid var(--border-secondary);
+  transform: translateY(-4px);
+}
+
+/* Glass Badge Small - Internal elements */
+.glass-badge-small {
+  background: var(--glow-cyan-tertiary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-accent);
+  margin-bottom: 1rem;
+}
+
+/* Glass Floating Cards - Feature badges */
+.glass-floating-card {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--glass-bg-hover);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-secondary);
+  transition: all 0.3s ease;
+}
+
+.glass-floating-card:hover {
+  background: var(--glass-bg);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ============================================
+   GLOW EFFECTS FOR GLASS ELEMENTS
+   ============================================ */
+.glow-cyan-soft {
+  box-shadow: 
+    0 4px 16px rgba(0, 163, 255, 0.2),
+    0 0 24px rgba(0, 163, 255, 0.15);
+}
+
+.glow-orange-soft {
+  box-shadow: 
+    0 4px 16px rgba(255, 107, 53, 0.2),
+    0 0 24px rgba(255, 107, 53, 0.15);
+}
+
+.glow-gold-soft {
+  box-shadow: 
+    0 4px 16px rgba(255, 215, 0, 0.2),
+    0 0 24px rgba(255, 215, 0, 0.15);
+}
+
+.shadow-neon-multi {
+  box-shadow: 
+    0 0 30px rgba(0, 163, 255, 0.3),
+    0 0 60px rgba(255, 107, 53, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  :root {
+    --line-width: 200vw;
+    --line-height: 2px;
+  }
+  
+  /* Reduce line count visibility on tablets */
+  .neon-line-4,
+  .neon-line-5 {
+    opacity: 0.6;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  :root {
+    --line-width: 250vw;
+    --line-height: 1.5px;
+  }
+  
+  /* Hide additional lines on mobile for performance */
+  .neon-line-4,
+  .neon-line-5 {
+    display: none;
+  }
+  
+  /* Adjust remaining lines for mobile */
+  .neon-line-1 {
+    top: 25%;
+    left: -20%;
+  }
+  
+  .neon-line-2 {
+    top: 55%;
+    right: -20%;
+  }
+  
+  .neon-line-3 {
+    top: 75%;
+    left: -10%;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-primary-cyan to-accent-orange bg-clip-text text-transparent;
@@ -44,5 +484,48 @@ body {
   
   .glow-orange {
     box-shadow: 0 0 20px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.1);
+  }
+
+  /* Theme-aware text colors */
+  .text-theme-primary {
+    color: var(--text-primary);
+  }
+
+  .text-theme-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-theme-tertiary {
+    color: var(--text-tertiary);
+  }
+
+  .text-theme-muted {
+    color: var(--text-muted);
+  }
+
+  /* Theme-aware background colors */
+  .bg-theme-primary {
+    background-color: var(--bg-primary);
+  }
+
+  .bg-theme-secondary {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-theme-tertiary {
+    background-color: var(--bg-tertiary);
+  }
+
+  /* Theme-aware border colors */
+  .border-theme-primary {
+    border-color: var(--border-primary);
+  }
+
+  .border-theme-secondary {
+    border-color: var(--border-secondary);
+  }
+
+  .border-theme-accent {
+    border-color: var(--border-accent);
   }
 }
