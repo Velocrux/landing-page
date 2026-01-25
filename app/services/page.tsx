@@ -1,17 +1,23 @@
 import type { Metadata } from 'next'
+import type { LucideIcon } from 'lucide-react'
 import { FadeIn } from '@/components/animations/fade-in'
-import { StaggerContainer, staggerItem } from '@/components/animations/stagger-container'
+import { StaggerContainer } from '@/components/animations/stagger-container'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Settings, Users, Cloud, Search, Headphones, Rocket } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 export const metadata: Metadata = {
   title: 'Digital Services - Velocrux',
   description: 'Comprehensive digital services including consulting, architecture, cloud deployment, and ongoing support.',
 }
 
-const services = [
+const services: Array<{
+  icon: LucideIcon
+  title: string
+  description: string
+  deliverables: string[]
+  duration: string
+}> = [
   {
     icon: Search,
     title: 'Technical Consulting',
@@ -159,12 +165,14 @@ export default function ServicesPage() {
           </FadeIn>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <motion.div key={service.title} variants={staggerItem}>
+            {services.map((service) => {
+              const IconComponent = service.icon as LucideIcon
+              return (
+              <div key={service.title}>
                 <Card className="h-full glass-card">
                   <CardHeader>
                     <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
-                      <service.icon className="text-primary-cyan" size={32} />
+                      <IconComponent className="text-primary-cyan" size={32} />
                     </div>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription className="text-base mb-4">
@@ -189,8 +197,9 @@ export default function ServicesPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
+              </div>
+              )
+            })}
           </StaggerContainer>
         </div>
       </section>
@@ -209,7 +218,7 @@ export default function ServicesPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit) => (
-              <motion.div key={benefit.title} variants={staggerItem}>
+              <div key={benefit.title}>
                 <Card className="h-full glass-card text-center">
                   <CardContent className="pt-8">
                     <div className="text-4xl mb-4">{benefit.icon}</div>
@@ -217,7 +226,7 @@ export default function ServicesPage() {
                     <p className="text-theme-secondary text-sm">{benefit.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </StaggerContainer>
         </div>
@@ -237,14 +246,14 @@ export default function ServicesPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
-              <motion.div key={industry.name} variants={staggerItem}>
+              <div key={industry.name}>
                 <Card className="glass-card hover:scale-105 transition-transform">
                   <CardContent className="pt-6">
                     <h3 className="text-lg font-semibold mb-2 text-theme-primary">{industry.name}</h3>
                     <p className="text-theme-secondary text-sm">{industry.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </StaggerContainer>
         </div>
@@ -270,7 +279,7 @@ export default function ServicesPage() {
                 { step: '03', title: 'Execution', description: 'Our team executes the project with regular updates and milestone reviews.' },
                 { step: '04', title: 'Delivery & Support', description: 'We deliver the completed work and provide ongoing support as needed.' },
               ].map((process, index) => (
-                <motion.div key={process.title} variants={staggerItem}>
+                <div key={process.title}>
                   <div className="flex items-start gap-6">
                     <div className="w-16 h-16 rounded-full bg-primary-cyan/20 text-primary-cyan font-bold text-xl flex items-center justify-center flex-shrink-0">
                       {process.step}
@@ -280,7 +289,7 @@ export default function ServicesPage() {
                       <p className="text-theme-secondary">{process.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </StaggerContainer>
           </div>
@@ -292,10 +301,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <FadeIn className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Discuss Your Project
+              Let&apos;s Discuss Your Project
             </h2>
             <p className="text-xl text-theme-secondary mb-8">
-              Ready to take your digital presence to the next level? Let's talk about how we can help.
+              Ready to take your digital presence to the next level? Let&apos;s talk about how we can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="xl">

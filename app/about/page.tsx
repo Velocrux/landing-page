@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { LucideIcon } from 'lucide-react'
 import { FadeIn } from '@/components/animations/fade-in'
 import { StaggerContainer } from '@/components/animations/stagger-container'
 import { Card, CardContent } from '@/components/ui/card'
@@ -18,7 +19,11 @@ const team = [
   { name: 'Lisa Park', title: 'UX/UI Design Lead', avatar: '👩‍🎨' },
 ]
 
-const values = [
+const values: Array<{
+  icon: LucideIcon
+  title: string
+  description: string
+}> = [
   {
     icon: Target,
     title: 'Innovation Excellence',
@@ -148,7 +153,7 @@ export default function AboutPage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => {
-              const IconComponent = value.icon
+              const IconComponent = value.icon as LucideIcon
               return (
                 <Card key={value.title} className="h-full text-center hover:scale-105 transition-transform duration-300">
                   <CardContent className="pt-8">

@@ -1,42 +1,14 @@
 import type { Metadata } from 'next'
 import { FadeIn } from '@/components/animations/fade-in'
-import { StaggerContainer, staggerItem } from '@/components/animations/stagger-container'
+import { StaggerContainer } from '@/components/animations/stagger-container'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Brain, Bot, BarChart3, Zap, Target, Workflow } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Brain, Bot, BarChart3, Zap, Workflow } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'AI Solutions - Velocrux',
   description: 'Custom AI development, machine learning models, and intelligent automation solutions.',
 }
-
-const aiServices = [
-  {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models for prediction, classification, and pattern recognition tailored to your business needs.',
-    features: ['Predictive Analytics', 'Computer Vision', 'Natural Language Processing', 'Recommendation Systems'],
-  },
-  {
-    icon: Bot,
-    title: 'AI Chatbots & Assistants',
-    description: 'Intelligent conversational AI that understands context and provides meaningful interactions.',
-    features: ['Customer Support Bots', 'Virtual Assistants', 'Voice Interfaces', 'Multi-language Support'],
-  },
-  {
-    icon: BarChart3,
-    title: 'Data Analytics & Insights',
-    description: 'Transform raw data into actionable insights with advanced analytics and visualization.',
-    features: ['Real-time Dashboards', 'Automated Reporting', 'Trend Analysis', 'Business Intelligence'],
-  },
-  {
-    icon: Workflow,
-    title: 'Process Automation',
-    description: 'Streamline operations with intelligent automation that adapts and learns from your workflows.',
-    features: ['Document Processing', 'Workflow Optimization', 'Decision Automation', 'Quality Assurance'],
-  },
-]
 
 const useCases = [
   {
@@ -102,31 +74,141 @@ export default function AISolutionsPage() {
           </FadeIn>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiServices.map((service) => (
-              <motion.div key={service.title} variants={staggerItem}>
-                <Card className="h-full glass-card">
-                  <CardHeader>
-                    <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
-                      <service.icon className="text-primary-cyan" size={32} />
-                    </div>
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-theme-secondary">
-                          <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+            <div>
+              <Card className="h-full glass-card">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
+                    <Brain className="text-primary-cyan" size={32} />
+                  </div>
+                  <CardTitle className="text-2xl">Machine Learning Models</CardTitle>
+                  <CardDescription className="text-base">
+                    Custom ML models for prediction, classification, and pattern recognition tailored to your business needs.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Predictive Analytics
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Computer Vision
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Natural Language Processing
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Recommendation Systems
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="h-full glass-card">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
+                    <Bot className="text-primary-cyan" size={32} />
+                  </div>
+                  <CardTitle className="text-2xl">AI Chatbots & Assistants</CardTitle>
+                  <CardDescription className="text-base">
+                    Intelligent conversational AI that understands context and provides meaningful interactions.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Customer Support Bots
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Virtual Assistants
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Voice Interfaces
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Multi-language Support
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="h-full glass-card">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
+                    <BarChart3 className="text-primary-cyan" size={32} />
+                  </div>
+                  <CardTitle className="text-2xl">Data Analytics & Insights</CardTitle>
+                  <CardDescription className="text-base">
+                    Transform raw data into actionable insights with advanced analytics and visualization.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Real-time Dashboards
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Automated Reporting
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Trend Analysis
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Business Intelligence
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="h-full glass-card">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
+                    <Workflow className="text-primary-cyan" size={32} />
+                  </div>
+                  <CardTitle className="text-2xl">Process Automation</CardTitle>
+                  <CardDescription className="text-base">
+                    Streamline operations with intelligent automation that adapts and learns from your workflows.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Document Processing
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Workflow Optimization
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Decision Automation
+                    </li>
+                    <li className="flex items-center text-theme-secondary">
+                      <Zap className="text-primary-cyan mr-2 flex-shrink-0" size={16} />
+                      Quality Assurance
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </StaggerContainer>
         </div>
       </section>
@@ -145,7 +227,7 @@ export default function AISolutionsPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase) => (
-              <motion.div key={useCase.title} variants={staggerItem}>
+              <div key={useCase.title}>
                 <Card className="h-full text-center glass-card hover:scale-105 transition-transform">
                   <CardContent className="pt-8">
                     <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -153,7 +235,7 @@ export default function AISolutionsPage() {
                     <p className="text-theme-secondary">{useCase.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </StaggerContainer>
         </div>
@@ -167,7 +249,7 @@ export default function AISolutionsPage() {
               Ready to Embrace AI?
             </h2>
             <p className="text-xl text-theme-secondary mb-8">
-              Let's discuss how artificial intelligence can transform your business operations and drive growth.
+              Let&apos;s discuss how artificial intelligence can transform your business operations and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="xl">

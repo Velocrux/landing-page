@@ -1,17 +1,23 @@
 import type { Metadata } from 'next'
+import type { LucideIcon } from 'lucide-react'
 import { FadeIn } from '@/components/animations/fade-in'
-import { StaggerContainer, staggerItem } from '@/components/animations/stagger-container'
+import { StaggerContainer } from '@/components/animations/stagger-container'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Smartphone, Globe, Database, Shield, Zap, Code } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 export const metadata: Metadata = {
   title: 'Product Development - Velocrux',
   description: 'Custom web applications, mobile apps, and enterprise software solutions built with cutting-edge technologies.',
 }
 
-const productTypes = [
+const productTypes: Array<{
+  icon: LucideIcon
+  title: string
+  description: string
+  technologies: string[]
+  features: string[]
+}> = [
   {
     icon: Globe,
     title: 'Web Applications',
@@ -119,12 +125,14 @@ export default function ProductsPage() {
           </FadeIn>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {productTypes.map((product) => (
-              <motion.div key={product.title} variants={staggerItem}>
+            {productTypes.map((product) => {
+              const IconComponent = product.icon as LucideIcon
+              return (
+              <div key={product.title}>
                 <Card className="h-full glass-card">
                   <CardHeader>
                     <div className="w-16 h-16 rounded-lg bg-primary-cyan/10 border border-primary-cyan/20 flex items-center justify-center mb-4">
-                      <product.icon className="text-primary-cyan" size={32} />
+                      <IconComponent className="text-primary-cyan" size={32} />
                     </div>
                     <CardTitle className="text-2xl">{product.title}</CardTitle>
                     <CardDescription className="text-base mb-4">
@@ -155,8 +163,9 @@ export default function ProductsPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
+              </div>
+              )
+            })}
           </StaggerContainer>
         </div>
       </section>
@@ -175,7 +184,7 @@ export default function ProductsPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {developmentProcess.map((process, index) => (
-              <motion.div key={process.title} variants={staggerItem}>
+              <div key={process.title}>
                 <Card className="h-full glass-card text-center">
                   <CardContent className="pt-8">
                     <div className="w-12 h-12 rounded-full bg-primary-cyan/20 text-primary-cyan font-bold text-xl flex items-center justify-center mx-auto mb-4">
@@ -185,7 +194,7 @@ export default function ProductsPage() {
                     <p className="text-theme-secondary text-sm">{process.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </StaggerContainer>
         </div>
@@ -229,7 +238,7 @@ export default function ProductsPage() {
               Ready to Build Something Amazing?
             </h2>
             <p className="text-xl text-theme-secondary mb-8">
-              Let's turn your vision into a powerful digital product that drives business growth.
+              Let&apos;s turn your vision into a powerful digital product that drives business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="xl">
