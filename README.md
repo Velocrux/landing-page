@@ -1,4 +1,4 @@
-# Velocrux - AI Workflow Automation Platform
+# Velocrux - AI Workflow Automation Platform.
 
 A modern, high-performance website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features advanced animations, AI-powered automation workflows, and seamless integrations with popular business tools.
 
