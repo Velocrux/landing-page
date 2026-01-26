@@ -966,6 +966,25 @@ body {
   .border-theme-accent {
     border-color: var(--border-accent);
   }
+
+  /* Button theme overrides for light theme */
+  [data-theme='light'] button[class*='bg-primary-blue'] {
+    background-color: var(--primary-cyan) !important;
+    color: white !important;
+  }
+
+  [data-theme='light'] button[class*='bg-primary-blue']:hover {
+    background-color: var(--electric-blue) !important;
+  }
+
+  [data-theme='light'] button[class*='border-accent-orange'] {
+    color: var(--primary-navy) !important;
+    background-color: #E0F2FE !important;
+  }
+
+  [data-theme='light'] button[class*='border-accent-orange']:hover {
+    background-color: #E0F2FE !important;
+  }
 }
 
 /* ============================================
