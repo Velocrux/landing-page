@@ -809,6 +809,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 107, 53, 0.25);
     transition: transform 0.3s ease, box-shadow 0.4s ease;
     /* Strong cyan ambient glow surrounding the button */
     box-shadow: 
@@ -880,6 +881,7 @@ body {
 
   /* Light theme button border and glow */
   [data-theme='light'] .button-glow-border {
+    background: rgba(255, 107, 53, 0.18);
     /* Strong cyan glow for light theme */
     box-shadow: 
       0 0 30px rgba(0, 102, 204, 0.5),
