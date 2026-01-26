@@ -40,18 +40,18 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-24 bg-theme-primary">
+    <section className="py-24 features-section-enhanced">
       <div className="container mx-auto px-4">
         <FadeIn className="text-center mb-16">
-          <p className="text-primary-cyan font-semibold mb-4 uppercase tracking-wider text-sm">
+          <p className="text-electric-cyan font-semibold mb-4 uppercase tracking-wider text-sm">
             Our Core Capabilities
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-theme-primary">
             From Concept to
             <br />
-            <span className="text-gradient">Digital Reality</span>
+            <span className="text-gradient-enhanced">Digital Reality</span>
           </h2>
-          <p className="text-theme-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-theme-secondary-bright text-lg max-w-2xl mx-auto">
             Velocrux combines deep technical expertise with innovative thinking to deliver
             solutions that transform businesses and drive growth.
           </p>
@@ -62,33 +62,33 @@ export function Features() {
             <motion.div key={feature.title} variants={staggerItem} className="relative">
               <div
                 className={cn(
-                  "h-full",
-                  feature.color === 'cyan' ? 'shiny-glow-border-cyan' : 'shiny-glow-border-orange'
+                  "h-full feature-card-wrapper",
+                  feature.color === 'cyan' ? 'shiny-glow-border-cyan-enhanced' : 'shiny-glow-border-orange-enhanced'
                 )}
               >
                 <Card
                   className={cn(
-                    "h-full hover:scale-105 transition-all duration-300 relative z-10",
-                    "bg-theme-secondary border-0 rounded-[22.5px]",
-                    feature.color === 'cyan' ? 'edge-glow-cyan' : 'edge-glow-orange'
+                    "h-full hover:scale-105 transition-all duration-300 relative z-10 feature-card-enhanced",
+                    "border-0 rounded-[22.5px]",
+                    feature.color === 'cyan' ? 'card-glow-cyan-enhanced' : 'card-glow-orange-enhanced'
                   )}
                 >
                 <CardHeader>
                   <div className={cn(
-                    "w-14 h-14 rounded-lg flex items-center justify-center mb-4",
+                    "w-14 h-14 rounded-2xl flex items-center justify-center mb-4 relative glass-icon-container",
                     feature.color === 'cyan'
-                      ? "bg-primary-cyan/10 border border-primary-cyan/30"
-                      : "bg-accent-orange/10 border border-accent-orange/30"
+                      ? "glass-icon-cyan-enhanced"
+                      : "glass-icon-orange-enhanced"
                   )}>
                     <feature.icon
-                      className={feature.color === 'cyan' ? 'text-primary-cyan' : 'text-accent-orange'}
+                      className={feature.color === 'cyan' ? 'text-electric-cyan' : 'text-vibrant-orange'}
                       size={28}
                     />
                   </div>
                   <CardTitle className="text-xl text-theme-primary">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base text-theme-secondary">
+                  <CardDescription className="text-base text-theme-secondary-bright">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
