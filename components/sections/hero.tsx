@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
+import { ReactTyped } from 'react-typed'
 import { Button } from '@/components/ui/button'
 import { FadeIn } from '@/components/animations/fade-in'
 import { FloatAnimation } from '@/components/animations/float-animation'
@@ -28,9 +29,9 @@ export function Hero() {
     for (let i = 0; i < streakCount; i++) {
       const isOrange = Math.random() > 0.5
       const isBright = Math.random() > 0.7
-      
+
       const className = `light-streak ${isOrange ? 'orange' : ''} ${isBright ? 'bright' : ''}`.trim()
-      
+
       newStreaks.push({
         id: i,
         className,
@@ -86,8 +87,8 @@ export function Hero() {
         {/* <div className="hero-video-overlay" /> */}
 
         {/* Glowing Orbs */}
-        <div 
-          className="glow-orb" 
+        <div
+          className="glow-orb"
           style={{
             width: '400px',
             height: '400px',
@@ -96,8 +97,8 @@ export function Hero() {
             left: '20%',
           }}
         />
-        <div 
-          className="glow-orb" 
+        <div
+          className="glow-orb"
           style={{
             width: '300px',
             height: '300px',
@@ -107,8 +108,8 @@ export function Hero() {
             animationDelay: '-5s',
           }}
         />
-        <div 
-          className="glow-orb" 
+        <div
+          className="glow-orb"
           style={{
             width: '350px',
             height: '350px',
@@ -153,35 +154,71 @@ export function Hero() {
 
             {/* Main Heading */}
             <FadeIn delay={0.2}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                AI Solutions, Products
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                Rapid AI Solutions
                 <br />
-                <span className="text-gradient">& Custom Services</span>
+                for a Deep Impact
               </h1>
             </FadeIn>
 
-            {/* Subheading */}
+            {/* Secondary Heading with Typed Effect */}
             <FadeIn delay={0.3}>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-8 leading-tight">
+                <span className="text-theme-secondary">We Build </span>
+                <span className="text-gradient typed-text-container">
+                  <ReactTyped
+                    strings={[
+                      'AI-Powered Solutions',
+                      'RAG Search Engines',
+                      'SaaS Products',
+                      'MVP Prototypes',
+                      'Custom Software Products',
+                      'Mobile Applications',
+                      'Web Platforms',
+                      'Cloud Infrastructure',
+                      'Enterprise Solutions',
+                      'Automation Tools',
+                    ]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                    backDelay={2000}
+                    loop
+                    showCursor={true}
+                    cursorChar="|"
+                    className="typed-text"
+                  />
+                </span>
+              </h2>
+            </FadeIn>
+
+            {/* Subheading */}
+            <FadeIn delay={0.4}>
               <p className="text-lg md:text-xl text-theme-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                From cutting-edge AI development to custom software solutions, 
+                From cutting-edge AI development to custom software solutions,
                 we transform ideas into powerful digital experiences that drive business growth.
               </p>
             </FadeIn>
 
             {/* CTA Buttons */}
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.5}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <Button variant="primary" size="xl">
-                  Explore Our Work
+                  Get Started
                 </Button>
-                <Button variant="secondary" size="xl">
-                  Start Your Project
-                </Button>
+                <div className="button-glow-border">
+                  <Button
+                    variant="secondary"
+                    size="xl"
+                    className="relative z-10 bg-theme-secondary hover:bg-theme-secondary hover:scale-100 !border-none"
+                  >
+                    Talk to Us
+                  </Button>
+                </div>
               </div>
             </FadeIn>
 
             {/* Trust Badge */}
-            <FadeIn delay={0.5}>
+            <FadeIn delay={0.6}>
               <p className="text-sm text-theme-tertiary mb-12">
                 Trusted by startups and enterprises worldwide
               </p>

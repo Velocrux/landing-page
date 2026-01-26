@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
@@ -38,10 +39,20 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div className="mb-8">
                 <Link
                   href="/"
-                  className="text-2xl font-bold text-gradient"
+                  className="flex items-center space-x-3 group"
                   onClick={onClose}
                 >
-                  {siteConfig.name}
+                  <div className="relative w-10 h-10 flex-shrink-0">
+                    <Image 
+                      src="/logo.png" 
+                      alt="Velocrux Logo" 
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-xl font-bold text-theme-primary">
+                    {siteConfig.name}
+                  </span>
                 </Link>
               </div>
 

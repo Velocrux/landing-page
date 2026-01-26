@@ -217,6 +217,199 @@
 }
 
 /* ============================================
+   ROTATING SHINY GLARE ANIMATION
+   Infinite rotating shine effect on card borders
+   ============================================ */
+@keyframes rotateShine {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateShineCyan {
+  0% {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(0, 163, 255, 0.8) 90deg,
+      rgba(0, 163, 255, 1) 120deg,
+      rgba(0, 163, 255, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(0, 163, 255, 0.8) 90deg,
+      rgba(0, 163, 255, 1) 120deg,
+      rgba(0, 163, 255, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+}
+
+@keyframes rotateShineOrange {
+  0% {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(255, 107, 53, 0.8) 90deg,
+      rgba(255, 107, 53, 1) 120deg,
+      rgba(255, 107, 53, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(255, 107, 53, 0.8) 90deg,
+      rgba(255, 107, 53, 1) 120deg,
+      rgba(255, 107, 53, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+}
+
+@keyframes rotateShineCyanLight {
+  0% {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(0, 102, 204, 0.8) 90deg,
+      rgba(0, 102, 204, 1) 120deg,
+      rgba(0, 102, 204, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(0, 102, 204, 0.8) 90deg,
+      rgba(0, 102, 204, 1) 120deg,
+      rgba(0, 102, 204, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+}
+
+@keyframes rotateShineOrangeLight {
+  0% {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(230, 81, 0, 0.8) 90deg,
+      rgba(230, 81, 0, 1) 120deg,
+      rgba(230, 81, 0, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360deg,
+      transparent 0deg,
+      transparent 60deg,
+      rgba(230, 81, 0, 0.8) 90deg,
+      rgba(230, 81, 0, 1) 120deg,
+      rgba(230, 81, 0, 0.8) 150deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+  }
+}
+
+/* ============================================
+   EDGE GLOW ANIMATIONS
+   Infinite glowing effect on card edges
+   ============================================ */
+@keyframes edgeGlowCyan {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(0, 163, 255, 0.4),
+      0 0 10px rgba(0, 163, 255, 0.3),
+      0 0 15px rgba(0, 163, 255, 0.2),
+      inset 0 0 5px rgba(0, 163, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(0, 163, 255, 0.6),
+      0 0 20px rgba(0, 163, 255, 0.4),
+      0 0 30px rgba(0, 163, 255, 0.3),
+      inset 0 0 10px rgba(0, 163, 255, 0.3);
+  }
+}
+
+@keyframes edgeGlowOrange {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(255, 107, 53, 0.4),
+      0 0 10px rgba(255, 107, 53, 0.3),
+      0 0 15px rgba(255, 107, 53, 0.2),
+      inset 0 0 5px rgba(255, 107, 53, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(255, 107, 53, 0.6),
+      0 0 20px rgba(255, 107, 53, 0.4),
+      0 0 30px rgba(255, 107, 53, 0.3),
+      inset 0 0 10px rgba(255, 107, 53, 0.3);
+  }
+}
+
+@keyframes edgeGlowCyanLight {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(0, 102, 204, 0.4),
+      0 0 10px rgba(0, 102, 204, 0.3),
+      0 0 15px rgba(0, 102, 204, 0.2),
+      inset 0 0 5px rgba(0, 102, 204, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(0, 102, 204, 0.6),
+      0 0 20px rgba(0, 102, 204, 0.4),
+      0 0 30px rgba(0, 102, 204, 0.3),
+      inset 0 0 10px rgba(0, 102, 204, 0.3);
+  }
+}
+
+@keyframes edgeGlowOrangeLight {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(230, 81, 0, 0.4),
+      0 0 10px rgba(230, 81, 0, 0.3),
+      0 0 15px rgba(230, 81, 0, 0.2),
+      inset 0 0 5px rgba(230, 81, 0, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(230, 81, 0, 0.6),
+      0 0 20px rgba(230, 81, 0, 0.4),
+      0 0 30px rgba(230, 81, 0, 0.3),
+      inset 0 0 10px rgba(230, 81, 0, 0.3);
+  }
+}
+
+/* ============================================
    PERFORMANCE OPTIMIZATIONS
    ============================================ */
 

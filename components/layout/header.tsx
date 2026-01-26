@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
@@ -28,10 +29,19 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-gradient">
-                {siteConfig.name}
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group">
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image 
+                  src="/logo.png" 
+                  alt="Velocrux Logo" 
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
+              <span className="text-xl font-bold text-theme-primary hidden sm:block">
+                {siteConfig.name}
+              </span>
             </Link>
 
             {/* Desktop Navigation */}

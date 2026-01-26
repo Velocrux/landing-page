@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 
 export function TrustBar() {
   const logos = [
-    'Company A',
-    'Company B',
-    'Company C',
-    'Company D',
-    'Company E',
-    'Company F',
+    'Coming Soon',
+    'Coming Soon',
+    'Coming Soon',
+    'Coming Soon',
+    'Coming Soon',
+    'Coming Soon',
   ]
 
   return (
