@@ -129,7 +129,7 @@ export function Features() {
               variants={staggerItem}
               className={cn(
                 "relative",
-                (feature.images || feature.image) && "md:col-span-2 lg:col-span-2"
+                feature.images && "md:col-span-2 lg:col-span-2"
               )}
             >
               <div
@@ -143,12 +143,12 @@ export function Features() {
                     "h-full transition-all duration-300 relative z-10 feature-card-enhanced overflow-hidden",
                     "border-0 rounded-[22.5px]",
                     feature.color === 'cyan' ? 'card-glow-cyan-enhanced' : 'card-glow-orange-enhanced',
-                    (feature.images || feature.image) && "flex flex-row items-stretch"
+                    feature.images && "flex flex-row items-stretch"
                   )}
                   onMouseEnter={() => setHoveredCard(`feature-${featureIndex}`)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  {(feature.images || feature.image) ? (
+                  {feature.images ? (
                     <>
                       <div className="flex-1 flex flex-col justify-start pt-8">
                         <CardHeader>
@@ -200,7 +200,7 @@ export function Features() {
                             className="relative w-full h-full"
                           >
                             <Image
-                              src={currentImage?.src || feature.image || ''}
+                              src={currentImage?.src || ''}
                               alt={currentImage?.label || feature.title}
                               fill
                               className="object-cover rounded-br-[22.5px]"
