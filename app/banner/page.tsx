@@ -25,21 +25,21 @@ export default function LinkedInBannerStatic() {
             >
               {/* Animated glow orbs - exactly from hero section */}
               <div className="glow-orb absolute top-[5%] left-[10%] w-[600px] h-[600px]" />
-              <div className="glow-orb absolute top-[30%] right-[15%] w-[500px] h-[500px]" 
-                   style={{ animationDelay: '2s' }} />
+              <div className="glow-orb absolute top-[30%] right-[15%] w-[500px] h-[500px]"
+                style={{ animationDelay: '2s' }} />
               <div className="glow-orb absolute bottom-[10%] left-[35%] w-[450px] h-[450px]"
-                   style={{ animationDelay: '4s' }} />
+                style={{ animationDelay: '4s' }} />
 
               {/* Animated light streaks - exactly from hero section */}
               <div className="light-streak absolute top-[20%] left-[15%] w-1 h-48" />
               <div className="light-streak orange absolute top-[50%] right-[20%] w-1 h-64"
-                   style={{ animationDelay: '1.5s' }} />
+                style={{ animationDelay: '1.5s' }} />
               <div className="light-streak absolute bottom-[25%] left-[60%] w-1 h-56"
-                   style={{ animationDelay: '3s' }} />
+                style={{ animationDelay: '3s' }} />
               <div className="light-streak orange absolute top-[35%] left-[40%] w-1 h-40"
-                   style={{ animationDelay: '2.5s' }} />
+                style={{ animationDelay: '2.5s' }} />
               <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
-                   style={{ animationDelay: '4s' }} />
+                style={{ animationDelay: '4s' }} />
             </div>
 
             {/* Content Overlay */}
@@ -76,7 +76,7 @@ export default function LinkedInBannerStatic() {
                       Velocrux
                     </span>
                   </h2>
-                  <p className="text-3xl text-electric-cyan font-bold">
+                  <p className="text-3xl text-vibrant-orange font-bold">
                     Think AI, Think of Us.
                   </p>
                 </div>
