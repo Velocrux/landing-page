@@ -68,7 +68,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 overflow-hidden relative bg-gradient-to-b from-[#000000] via-[#0A1628] to-[#000000]">
+    <section id="contact" className="py-16 md:py-24 overflow-hidden relative section-bg-alt">
       <CalendlyModal
         isOpen={isCalendlyOpen}
         onClose={() => setIsCalendlyOpen(false)}

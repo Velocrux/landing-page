@@ -86,6 +86,9 @@
   --bg-tertiary: #EDF2F7;
   --bg-hero: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0F9FF 100%);
   --bg-hero-container: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0F9FF 100%);
+  --bg-section: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 50%, #FFFFFF 100%);
+  --bg-section-alt: linear-gradient(180deg, #F8FAFB 0%, #EDF2F7 50%, #F8FAFB 100%);
+  --bg-dark-section: linear-gradient(180deg, #EDF2F7 0%, #E2E8F0 50%, #EDF2F7 100%);
   
   /* Text Colors - high contrast for readability */
   --text-primary: #0F172A;
@@ -1328,3 +1331,31 @@ body {
 [data-theme='light'] .glow-orange {
   box-shadow: 0 0 20px rgba(230, 81, 0, 0.2), 0 0 40px rgba(230, 81, 0, 0.08);
 }
+
+/* ============================================
+   THEME-AWARE SECTION BACKGROUNDS
+   ============================================ */
+.section-bg {
+  background: linear-gradient(180deg, #000000 0%, #0A1628 50%, #000000 100%);
+}
+
+[data-theme='light'] .section-bg {
+  background: var(--bg-section);
+}
+
+.section-bg-alt {
+  background: linear-gradient(180deg, #0A1628 0%, #000000 50%, #0A1628 100%);
+}
+
+[data-theme='light'] .section-bg-alt {
+  background: var(--bg-section-alt);
+}
+
+.section-bg-dark {
+  background: linear-gradient(180deg, #000000 0%, #0A1628 50%, #000000 100%);
+}
+
+[data-theme='light'] .section-bg-dark {
+  background: var(--bg-dark-section);
+}
+

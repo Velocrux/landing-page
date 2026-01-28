@@ -67,7 +67,7 @@ const approaches = [
 
 export function ProductFeatures() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0A1628] to-[#000000] overflow-hidden">
+    <section className="py-24 section-bg-alt overflow-hidden">
       <div className="container mx-auto px-4">
         <FadeIn className="text-center mb-20">
           <p className="text-vibrant-orange font-semibold mb-4 uppercase tracking-wider text-sm">

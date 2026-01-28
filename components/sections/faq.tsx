@@ -76,7 +76,7 @@ export function FAQ() {
   const filteredFaqs = faqs.filter(faq => faq.category === activeCategory)
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0A1628] to-[#000000] overflow-hidden relative">
+    <section className="py-24 section-bg-dark overflow-hidden relative">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-vibrant-orange/10 rounded-full blur-3xl" />

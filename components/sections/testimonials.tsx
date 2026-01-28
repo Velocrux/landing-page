@@ -56,7 +56,7 @@ export function Testimonials() {
   const otherTestimonials = testimonials.filter(t => !t.featured)
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#000000] to-[#0A1628] overflow-hidden relative">
+    <section className="py-24 section-bg overflow-hidden relative">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-electric-cyan/5 rounded-full blur-3xl" />
