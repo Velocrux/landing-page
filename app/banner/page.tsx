@@ -43,7 +43,7 @@ export default function LinkedInBannerStatic() {
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
+            <div className="absolute inset-0 z-10 flex items-center justify-end px-16 gap-8">
               {/* Left: Service Cards with Contact Info */}
               <div className="flex flex-col gap-6">
                 {/* Service Cards Row */}
@@ -83,7 +83,7 @@ export default function LinkedInBannerStatic() {
                 </div>
 
                 {/* Contact Information Row */}
-                <div className="flex items-center gap-6 ml-4">
+                <div className="flex items-center gap-6">
                   {/* Email */}
                   <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
                     <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
