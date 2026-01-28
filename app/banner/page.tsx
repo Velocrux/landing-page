@@ -23,23 +23,23 @@ export default function LinkedInBannerStatic() {
                 background: 'linear-gradient(135deg, #0A1628 0%, #000000 50%, #0A1628 100%)',
               }}
             >
-              {/* Animated glow orbs - exactly from hero section */}
-              <div className="glow-orb absolute top-[5%] left-[10%] w-[600px] h-[600px]" />
-              <div className="glow-orb absolute top-[30%] right-[15%] w-[500px] h-[500px]"
-                style={{ animationDelay: '2s' }} />
-              <div className="glow-orb absolute bottom-[10%] left-[35%] w-[450px] h-[450px]"
-                style={{ animationDelay: '4s' }} />
+              {/* Animated glow orbs - moved up */}
+              <div className="glow-orb absolute top-[-10%] left-[10%] w-[600px] h-[600px]" />
+              <div className="glow-orb absolute top-[10%] right-[15%] w-[500px] h-[500px]" 
+                   style={{ animationDelay: '2s' }} />
+              <div className="glow-orb absolute bottom-[-5%] left-[35%] w-[450px] h-[450px]"
+                   style={{ animationDelay: '4s' }} />
 
-              {/* Animated light streaks - exactly from hero section */}
-              <div className="light-streak absolute top-[20%] left-[15%] w-1 h-48" />
-              <div className="light-streak orange absolute top-[50%] right-[20%] w-1 h-64"
-                style={{ animationDelay: '1.5s' }} />
-              <div className="light-streak absolute bottom-[25%] left-[60%] w-1 h-56"
-                style={{ animationDelay: '3s' }} />
-              <div className="light-streak orange absolute top-[35%] left-[40%] w-1 h-40"
-                style={{ animationDelay: '2.5s' }} />
-              <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
-                style={{ animationDelay: '4s' }} />
+              {/* Animated light streaks - moved up */}
+              <div className="light-streak absolute top-[5%] left-[15%] w-1 h-48" />
+              <div className="light-streak orange absolute top-[30%] right-[20%] w-1 h-64"
+                   style={{ animationDelay: '1.5s' }} />
+              <div className="light-streak absolute bottom-[10%] left-[60%] w-1 h-56"
+                   style={{ animationDelay: '3s' }} />
+              <div className="light-streak orange absolute top-[20%] left-[40%] w-1 h-40"
+                   style={{ animationDelay: '2.5s' }} />
+              <div className="light-streak absolute bottom-[5%] right-[35%] w-1 h-52"
+                   style={{ animationDelay: '4s' }} />
             </div>
 
             {/* Content Overlay */}
