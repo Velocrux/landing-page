@@ -868,7 +868,7 @@ body {
       transparent 115deg,
       transparent 360deg
     );
-    animation: rotateShine 10s linear infinite;
+    animation: rotateShine 6s linear infinite;
     z-index: 0;
     will-change: transform;
   }
@@ -893,7 +893,7 @@ body {
     );
     filter: blur(20px);
     opacity: 0.6;
-    animation: rotateShine 10s linear infinite;
+    animation: rotateShine 6s linear infinite;
     z-index: -1;
     will-change: transform;
   }
