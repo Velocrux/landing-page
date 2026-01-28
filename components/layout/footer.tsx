@@ -52,7 +52,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#0A1628] to-[#000000] border-t border-white/10 overflow-hidden">
+    <footer className="relative footer-bg border-t border-slate-300 dark:border-white/10 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-electric-cyan/5 rounded-full blur-3xl" />
@@ -108,35 +108,35 @@ export function Footer() {
                 href={siteConfig.links.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
+                className="w-10 h-10 rounded-xl bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
                 aria-label="Twitter"
               >
-                <Twitter size={16} className="text-white group-hover:text-electric-cyan transition-colors" />
+                <Twitter size={16} className="text-slate-700 dark:text-white group-hover:text-electric-cyan transition-colors" />
               </a>
               <a
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
+                className="w-10 h-10 rounded-xl bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
                 aria-label="GitHub"
               >
-                <Github size={16} className="text-white group-hover:text-electric-cyan transition-colors" />
+                <Github size={16} className="text-slate-700 dark:text-white group-hover:text-electric-cyan transition-colors" />
               </a>
               <a
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
+                className="w-10 h-10 rounded-xl bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 flex items-center justify-center hover:bg-electric-cyan/20 hover:border-electric-cyan/50 transition-all group"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={16} className="text-white group-hover:text-electric-cyan transition-colors" />
+                <Linkedin size={16} className="text-slate-700 dark:text-white group-hover:text-electric-cyan transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-white mb-6 flex items-center gap-2">
+            <h3 className="font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <Zap size={16} className="text-electric-cyan" />
               Quick Links
             </h3>
@@ -158,7 +158,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-white mb-6 flex items-center gap-2">
+            <h3 className="font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <div className="w-4 h-4 bg-gradient-to-r from-electric-cyan to-vibrant-orange rounded-sm" />
               Services
             </h3>
@@ -181,7 +181,7 @@ export function Footer() {
               {industries.map((industry) => (
                 <span
                   key={industry}
-                  className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-theme-secondary-bright text-xs hover:border-electric-cyan/50 hover:text-electric-cyan transition-all cursor-default"
+                  className="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 text-slate-700 dark:text-theme-secondary-bright text-xs hover:border-electric-cyan/50 hover:text-electric-cyan transition-all cursor-default"
                 >
                   {industry}
                 </span>
@@ -191,7 +191,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
+        <div className="pt-8 border-t border-slate-300 dark:border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-theme-secondary text-sm">
               © {currentYear} {siteConfig.name}. All rights reserved.

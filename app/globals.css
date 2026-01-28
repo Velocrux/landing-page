@@ -1063,6 +1063,10 @@ body {
     color: #B8C5D6;
   }
 
+  [data-theme='light'] .text-theme-secondary-bright {
+    color: #475569;
+  }
+
   /* Electric cyan for headings */
   .text-electric-cyan {
     color: #00D4FF;
@@ -1417,6 +1421,14 @@ body {
 
 [data-theme='light'] .section-bg-dark {
   background: var(--bg-dark-section);
+}
+
+.footer-bg {
+  background: linear-gradient(180deg, #0A1628 0%, #000000 100%);
+}
+
+[data-theme='light'] .footer-bg {
+  background: linear-gradient(180deg, #E2E8F0 0%, #CBD5E1 100%);
 }
 
 /* Navigation dots for feature cards */
