@@ -43,11 +43,11 @@ export default function LinkedInBannerStatic() {
             </div>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 z-10 flex items-center justify-end pr-2 gap-2">
+          <div className="absolute inset-0 z-10 flex items-center justify-end pr-2 gap-1">
               {/* Left: Service Cards with Contact Info - aligned with tagline */}
-              <div className="flex flex-col gap-6 mt-16">
+              <div className="flex flex-col gap-4 mt-16">
                 {/* Service Cards Row */}
-                <div className="flex gap-8">
+                <div className="flex gap-4">
                   {/* AI Solutions Card */}
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
