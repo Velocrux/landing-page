@@ -105,8 +105,8 @@ export function Contact() {
                 <button
                   onClick={() => handleMethodClick(method)}
                   className={`group w-full text-left p-6 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:-translate-y-2 ${method.color === 'cyan'
-                    ? 'bg-electric-cyan/5 border-electric-cyan/20 hover:border-electric-cyan/50 hover:shadow-[0_0_30px_rgba(0,163,255,0.2)]'
-                    : 'bg-vibrant-orange/5 border-vibrant-orange/20 hover:border-vibrant-orange/50 hover:shadow-[0_0_30px_rgba(255,107,53,0.2)]'
+                    ? 'bg-electric-cyan/5 border-slate-300 dark:border-electric-cyan/20 hover:border-electric-cyan/50 hover:shadow-[0_0_30px_rgba(0,163,255,0.2)]'
+                    : 'bg-vibrant-orange/5 border-slate-300 dark:border-vibrant-orange/20 hover:border-vibrant-orange/50 hover:shadow-[0_0_30px_rgba(255,107,53,0.2)]'
                     }`}
                 >
                   <div
@@ -142,7 +142,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-12 gap-12 max-w-7xl mx-auto">
           {/* Contact Form */}
           <FadeIn className="lg:col-span-7">
-            <div className="p-8 md:p-10 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-white/10 via-white/5 to-transparent border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden">
+            <div className="p-8 md:p-10 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-white/10 via-white/5 to-transparent dark:from-white/10 dark:via-white/5 dark:to-transparent border border-slate-300 dark:border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden">
               {/* Decorative gradient orb */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-electric-cyan/10 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-vibrant-orange/5 rounded-full blur-3xl pointer-events-none" />
@@ -160,7 +160,7 @@ export function Contact() {
           {/* Quick Info Sidebar */}
           <FadeIn delay={0.2} className="lg:col-span-5 space-y-6">
             {/* Quick Info Cards */}
-            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-white/10 to-transparent border border-white/10">
+            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-white/10 to-transparent dark:from-white/10 dark:to-transparent border border-slate-300 dark:border-white/10">
               <h3 className="text-xl font-bold mb-6 text-theme-primary">What to Expect</h3>
               <div className="space-y-4">
                 {quickInfo.map((info, index) => {
@@ -181,7 +181,7 @@ export function Contact() {
             </div>
 
             {/* Industries Card */}
-            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-vibrant-orange/10 to-transparent border border-vibrant-orange/20">
+            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-vibrant-orange/10 to-transparent dark:from-vibrant-orange/10 dark:to-transparent border border-slate-300 dark:border-vibrant-orange/20">
               <h3 className="text-xl font-bold mb-4 text-theme-primary">Industries We Serve</h3>
               <div className="flex flex-wrap gap-2">
                 {['Healthcare', 'Logistics', 'Education', 'Energy', 'Tourism', 'E-Commerce'].map((industry) => (
@@ -196,7 +196,7 @@ export function Contact() {
             </div>
 
             {/* Next Steps Card */}
-            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-electric-cyan/10 to-transparent border border-electric-cyan/20">
+            <div className="p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-electric-cyan/10 to-transparent dark:from-electric-cyan/10 dark:to-transparent border border-slate-300 dark:border-electric-cyan/20">
               <h3 className="text-xl font-bold mb-4 text-theme-primary">After You Reach Out</h3>
               <ol className="space-y-3">
                 {['Initial consultation call', 'Project scope & timeline', 'Proposal & agreement', 'Development kickoff'].map((step, index) => (

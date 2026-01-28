@@ -70,9 +70,9 @@ export function ContactForm() {
             placeholder="John Doe"
             {...register('name')}
             className={cn(
-              'bg-white/5 border-white/10 text-white placeholder:text-white/40',
+              'bg-white/5 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-800 dark:text-white placeholder:text-slate-500 dark:placeholder:text-white/40',
               'focus:bg-white/10 focus:border-electric-cyan/50 focus:ring-electric-cyan/20',
-              'hover:border-white/20 transition-all duration-300',
+              'hover:border-slate-400 dark:hover:border-white/20 transition-all duration-300',
               errors.name && 'border-red-500/50 focus:ring-red-500/20 focus:border-red-500'
             )}
           />
@@ -95,9 +95,9 @@ export function ContactForm() {
             placeholder="john@example.com"
             {...register('email')}
             className={cn(
-              'bg-white/5 border-white/10 text-white placeholder:text-white/40',
+              'bg-white/5 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-800 dark:text-white placeholder:text-slate-500 dark:placeholder:text-white/40',
               'focus:bg-white/10 focus:border-electric-cyan/50 focus:ring-electric-cyan/20',
-              'hover:border-white/20 transition-all duration-300',
+              'hover:border-slate-400 dark:hover:border-white/20 transition-all duration-300',
               errors.email && 'border-red-500/50 focus:ring-red-500/20 focus:border-red-500'
             )}
           />
@@ -120,9 +120,9 @@ export function ContactForm() {
           placeholder="What would you like to discuss?"
           {...register('subject')}
           className={cn(
-            'bg-white/5 border-white/10 text-white placeholder:text-white/40',
+            'bg-white/5 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-800 dark:text-white placeholder:text-slate-500 dark:placeholder:text-white/40',
             'focus:bg-white/10 focus:border-electric-cyan/50 focus:ring-electric-cyan/20',
-            'hover:border-white/20 transition-all duration-300',
+            'hover:border-slate-400 dark:hover:border-white/20 transition-all duration-300',
             errors.subject && 'border-red-500/50 focus:ring-red-500/20 focus:border-red-500'
           )}
         />
@@ -145,9 +145,9 @@ export function ContactForm() {
           rows={6}
           {...register('message')}
           className={cn(
-            'bg-white/5 border-white/10 text-white placeholder:text-white/40',
+            'bg-white/5 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-800 dark:text-white placeholder:text-slate-500 dark:placeholder:text-white/40',
             'focus:bg-white/10 focus:border-electric-cyan/50 focus:ring-electric-cyan/20',
-            'hover:border-white/20 transition-all duration-300',
+            'hover:border-slate-400 dark:hover:border-white/20 transition-all duration-300',
             errors.message && 'border-red-500/50 focus:ring-red-500/20 focus:border-red-500'
           )}
         />

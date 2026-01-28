@@ -208,7 +208,7 @@ export function FAQ() {
                     >
                       <AccordionItem
                         value={`item-${index}`}
-                        className="bg-white/5 backdrop-blur-md border border-white/10 hover:border-electric-cyan/30 px-6 rounded-2xl transition-all duration-300 overflow-hidden"
+                        className="bg-white/10 dark:bg-white/5 backdrop-blur-md border border-slate-300 dark:border-white/10 hover:border-electric-cyan/50 dark:hover:border-electric-cyan/30 px-6 rounded-2xl transition-all duration-300 overflow-hidden"
                       >
                         <AccordionTrigger className="text-left text-lg font-semibold text-theme-primary hover:text-electric-cyan transition-colors duration-300 py-6">
                           {faq.question}

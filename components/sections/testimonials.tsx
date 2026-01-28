@@ -141,8 +141,8 @@ export function Testimonials() {
                 <div
                   className={cn(
                     "h-full p-6 rounded-2xl backdrop-blur-md",
-                    "bg-gradient-to-br from-white/5 to-transparent",
-                    "border border-white/10 hover:border-electric-cyan/30",
+                    "bg-gradient-to-br from-white/5 to-transparent dark:from-white/5 dark:to-transparent",
+                    "border border-slate-300 dark:border-white/10 hover:border-electric-cyan/50 dark:hover:border-electric-cyan/30",
                     "transition-all duration-300",
                     "hover:shadow-[0_0_30px_rgba(0,163,255,0.15)]"
                   )}
@@ -162,7 +162,7 @@ export function Testimonials() {
                   {/* Author */}
                   <div className="mt-auto">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-electric-cyan/20 to-vibrant-orange/20 flex items-center justify-center text-lg backdrop-blur-md border border-white/10">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-electric-cyan/20 to-vibrant-orange/20 flex items-center justify-center text-lg backdrop-blur-md border border-slate-300 dark:border-white/10">
                         {testimonial.name.charAt(0)}
                       </div>
                       <div>
