@@ -95,10 +95,6 @@ export default function LinkedInBannerDownload() {
                    style={{ animationDelay: '2.5s' }} />
               <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
                    style={{ animationDelay: '4s' }} />
-
-              {/* Decorative elements */}
-              <div className="absolute top-8 right-16 w-16 h-16 border border-electric-cyan/30 rounded-lg rotate-12" />
-              <div className="absolute bottom-12 left-20 w-20 h-20 border border-vibrant-orange/30 rounded-full" />
             </div>
 
             {/* Content Overlay */}

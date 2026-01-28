@@ -40,13 +40,6 @@ export default function LinkedInBannerStatic() {
                    style={{ animationDelay: '2.5s' }} />
               <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
                    style={{ animationDelay: '4s' }} />
-
-              {/* Additional decorative elements */}
-              <div className="absolute top-8 right-16 w-16 h-16 border border-electric-cyan/30 rounded-lg rotate-12 animate-pulse" />
-              <div className="absolute bottom-12 left-20 w-20 h-20 border border-vibrant-orange/30 rounded-full animate-pulse" 
-                   style={{ animationDelay: '1s' }} />
-              <div className="absolute top-[30%] left-[5%] w-12 h-12 border border-electric-cyan/20 rounded-lg -rotate-6 animate-pulse"
-                   style={{ animationDelay: '2s' }} />
             </div>
 
             {/* Content Overlay */}
