@@ -89,7 +89,7 @@ export default function LinkedInBannerStatic() {
                     <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
                       <Mail className="text-electric-cyan" size={16} />
                     </div>
-                    <span className="text-white font-semibold text-sm">kauser@velocrux.com</span>
+                    <span className="text-white font-semibold text-lg">kauser@velocrux.com</span>
                   </div>
 
                   {/* Phone */}
@@ -97,7 +97,7 @@ export default function LinkedInBannerStatic() {
                     <div className="w-8 h-8 rounded-lg bg-vibrant-orange/20 flex items-center justify-center">
                       <Phone className="text-vibrant-orange" size={16} />
                     </div>
-                    <span className="text-white font-semibold text-sm">+91 76193 97846</span>
+                    <span className="text-white font-semibold text-lg">+91 76193 97846</span>
                   </div>
                 </div>
               </div>
