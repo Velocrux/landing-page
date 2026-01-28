@@ -60,30 +60,7 @@ export default function LinkedInBanner() {
 
           {/* Content Overlay */}
           <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
-            {/* Left: Logo and Branding */}
-            <div className="flex items-center gap-6">
-              <div className="relative w-24 h-24 flex-shrink-0">
-                <Image
-                  src="/logo.png"
-                  alt="Velocrux Logo"
-                  fill
-                  className="object-contain drop-shadow-[0_0_30px_rgba(0,212,255,0.6)]"
-                />
-              </div>
-              <div>
-                <h1 className="text-5xl font-bold mb-2">
-                  <span className="text-gradient-enhanced">Velocrux</span>
-                </h1>
-                <p className="text-xl text-electric-cyan font-semibold mb-1">
-                  AI-Powered Digital Solutions
-                </p>
-                <p className="text-white/70 text-base">
-                  Transforming ideas into impactful digital realities
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Key Features */}
+            {/* Left: Key Features */}
             <div className="flex gap-8">
               <div className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-electric-cyan/20">
                 <div className="w-12 h-12 rounded-xl bg-electric-cyan/20 flex items-center justify-center">
@@ -104,6 +81,26 @@ export default function LinkedInBanner() {
                   <Sparkles className="text-electric-cyan" size={24} />
                 </div>
                 <span className="text-white font-semibold text-sm">Innovation</span>
+              </div>
+            </div>
+
+            {/* Right: Logo and Branding */}
+            <div className="flex items-center gap-6">
+              <div className="text-right">
+                <h1 className="text-5xl font-bold mb-2">
+                  <span className="text-gradient-enhanced">Velocrux</span>
+                </h1>
+                <p className="text-2xl text-electric-cyan font-bold">
+                  Think AI, Think of Us.
+                </p>
+              </div>
+              <div className="relative w-24 h-24 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Velocrux Logo"
+                  fill
+                  className="object-contain drop-shadow-[0_0_30px_rgba(0,212,255,0.6)]"
+                />
               </div>
             </div>
           </div>
