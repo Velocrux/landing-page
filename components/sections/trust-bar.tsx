@@ -13,7 +13,7 @@ export function TrustBar() {
   ]
 
   return (
-    <section className="py-12 border-y border-neutral-dark-gray bg-primary-navy-light/50">
+    <section className="py-12 border-y border-white/10 dark:border-neutral-dark-gray bg-white/5 dark:bg-primary-navy-light/50">
       <div className="container mx-auto px-4">
         <div className="overflow-hidden">
           <motion.div

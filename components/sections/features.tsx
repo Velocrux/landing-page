@@ -264,12 +264,12 @@ export function Features() {
                                   key={dotIndex}
                                   onClick={() => handleDotClick(featureIndex, dotIndex)}
                                   className={cn(
-                                    "h-3 rounded-full transition-all duration-300",
+                                    "h-3 rounded-full transition-all duration-300 nav-dot",
                                     imageIndex === dotIndex
                                       ? feature.color === 'cyan'
-                                        ? 'bg-electric-cyan w-10 shadow-[0_0_15px_rgba(0,163,255,0.8)]'
-                                        : 'bg-vibrant-orange w-10 shadow-[0_0_15px_rgba(255,107,53,0.8)]'
-                                      : 'bg-white/50 hover:bg-white/70 w-3'
+                                        ? 'bg-electric-cyan w-10 shadow-[0_0_15px_rgba(0,163,255,0.8)] active-dot-cyan'
+                                        : 'bg-vibrant-orange w-10 shadow-[0_0_15px_rgba(255,107,53,0.8)] active-dot-orange'
+                                      : 'bg-white/50 hover:bg-white/70 w-3 inactive-dot'
                                   )}
                                   aria-label={`Go to image ${dotIndex + 1}`}
                                 />
