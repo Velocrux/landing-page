@@ -24,8 +24,8 @@ const features = [
       { src: '/healthcare.png', label: 'Health Care' },
       { src: '/e-commerce.png', label: 'E-Commerce' },
       { src: '/ai-multimodal.png', label: 'Multimodal AI' },
-      { src: '/ai-vision.png', label: 'AI Vision' },
-      { src: '/ai-holographic.png', label: 'Neural Networks' },
+      { src: '/ai-vision.png', label: 'Ethical AI' },
+      { src: '/ai-holographic.png', label: 'RAG Chatbots' },
     ],
   },
   {
