@@ -16,46 +16,37 @@ export default function LinkedInBannerStatic() {
           style={{ width: '1584px', height: '396px', maxWidth: '100%' }}
         >
           <div className="relative w-full h-full overflow-hidden rounded-2xl border border-electric-cyan/30 shadow-[0_0_60px_rgba(0,163,255,0.3)]">
-            {/* Static Background with gradient */}
+            {/* Animated Background from Hero Section */}
             <div
-              className="absolute inset-0"
+              className="background-container absolute inset-0"
               style={{
                 background: 'linear-gradient(135deg, #0A1628 0%, #000000 50%, #0A1628 100%)',
               }}
             >
-              {/* Static orbs (no animation for cleaner screenshot) */}
-              <div
-                className="absolute w-[400px] h-[400px] rounded-full blur-3xl"
-                style={{
-                  top: '10%',
-                  left: '15%',
-                  background: 'rgba(0, 212, 255, 0.3)',
-                  opacity: 0.4,
-                }}
-              />
-              <div
-                className="absolute w-[500px] h-[500px] rounded-full blur-3xl"
-                style={{
-                  top: '40%',
-                  right: '20%',
-                  background: 'rgba(255, 122, 80, 0.2)',
-                  opacity: 0.3,
-                }}
-              />
-              <div
-                className="absolute w-[350px] h-[350px] rounded-full blur-3xl"
-                style={{
-                  bottom: '20%',
-                  left: '40%',
-                  background: 'rgba(0, 163, 255, 0.25)',
-                  opacity: 0.35,
-                }}
-              />
+              {/* Animated glow orbs - exactly from hero section */}
+              <div className="glow-orb absolute top-[5%] left-[10%] w-[600px] h-[600px]" />
+              <div className="glow-orb absolute top-[30%] right-[15%] w-[500px] h-[500px]" 
+                   style={{ animationDelay: '2s' }} />
+              <div className="glow-orb absolute bottom-[10%] left-[35%] w-[450px] h-[450px]"
+                   style={{ animationDelay: '4s' }} />
 
-              {/* Decorative elements */}
-              <div className="absolute top-8 right-16 w-16 h-16 border border-electric-cyan/30 rounded-lg rotate-12" />
-              <div className="absolute bottom-12 left-20 w-20 h-20 border border-vibrant-orange/30 rounded-full" />
-              <div className="absolute top-[30%] left-[5%] w-12 h-12 border border-electric-cyan/20 rounded-lg -rotate-6" />
+              {/* Animated light streaks - exactly from hero section */}
+              <div className="light-streak absolute top-[20%] left-[15%] w-1 h-48" />
+              <div className="light-streak orange absolute top-[50%] right-[20%] w-1 h-64"
+                   style={{ animationDelay: '1.5s' }} />
+              <div className="light-streak absolute bottom-[25%] left-[60%] w-1 h-56"
+                   style={{ animationDelay: '3s' }} />
+              <div className="light-streak orange absolute top-[35%] left-[40%] w-1 h-40"
+                   style={{ animationDelay: '2.5s' }} />
+              <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
+                   style={{ animationDelay: '4s' }} />
+
+              {/* Additional decorative elements */}
+              <div className="absolute top-8 right-16 w-16 h-16 border border-electric-cyan/30 rounded-lg rotate-12 animate-pulse" />
+              <div className="absolute bottom-12 left-20 w-20 h-20 border border-vibrant-orange/30 rounded-full animate-pulse" 
+                   style={{ animationDelay: '1s' }} />
+              <div className="absolute top-[30%] left-[5%] w-12 h-12 border border-electric-cyan/20 rounded-lg -rotate-6 animate-pulse"
+                   style={{ animationDelay: '2s' }} />
             </div>
 
             {/* Content Overlay */}
