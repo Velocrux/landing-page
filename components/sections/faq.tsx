@@ -6,93 +6,223 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { FadeIn } from '@/components/animations/fade-in'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, Clock, Code, Sparkles, DollarSign, Users } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
+import { useState } from 'react'
+
+const faqCategories = [
+  { id: 'general', label: 'General', icon: Sparkles, color: 'orange' },
+  { id: 'process', label: 'Process', icon: Code, color: 'cyan' },
+  { id: 'timeline', label: 'Timeline', icon: Clock, color: 'orange' },
+  { id: 'pricing', label: 'Pricing', icon: DollarSign, color: 'cyan' },
+]
 
 const faqs = [
   {
-    question: 'What is Velocrux and how does it work?',
+    category: 'general',
+    question: 'What services does Velocrux offer?',
     answer:
-      'Velocrux is an AI-powered automation platform that connects your favorite apps and tools. It uses intelligent agents to handle repetitive tasks, analyze data, and streamline workflows without requiring any coding knowledge.',
+      'We specialize in custom AI solutions, rapid prototype development, digital services (consulting, system architecture, cloud deployment), and innovation lab services. We build everything from AI-powered applications to full-stack web and mobile platforms.',
   },
   {
-    question: 'Which apps can I integrate?',
+    category: 'general',
+    question: 'Which industries do you work with?',
     answer:
-      'Velocrux supports 50+ integrations, including Slack, HubSpot, Zendesk, Salesforce, Google Workspace, WhatsApp, Zapier, and more. We\'re constantly adding new integrations based on user feedback.',
+      'We have deep expertise in Healthcare, Logistics, Education, Energy, Tourism, and E-Commerce sectors. Our domain-specific knowledge enables us to build solutions that truly understand and solve industry-specific challenges.',
   },
   {
-    question: 'How does Velocrux AI automate tasks?',
+    category: 'process',
+    question: 'What is your development approach?',
     answer:
-      'Our AI agents use natural language processing and machine learning to understand your workflows. You can set up triggers, define actions, and let the AI handle the rest. It learns from your patterns and suggests optimizations over time.',
+      'We follow an agile methodology with rapid iteration cycles. You\'ll see working prototypes within weeks, receive weekly progress updates, and have direct access to our development team throughout the project lifecycle.',
   },
   {
-    question: 'Is my data secure with Velocrux AI?',
+    category: 'process',
+    question: 'How involved will I be in the development?',
     answer:
-      'Absolutely. We use enterprise-grade encryption, comply with SOC 2 and GDPR standards, and never share your data with third parties. All connections use secure OAuth protocols.',
+      'Very involved! We work as an extension of your team. You\'ll have a dedicated project manager, participate in sprint reviews, and can directly communicate with developers. Your feedback drives our development process.',
   },
   {
-    question: 'What kind of support do you offer?',
+    category: 'timeline',
+    question: 'How quickly can you deliver an MVP?',
     answer:
-      'We provide 24/7 email support, live chat during business hours, comprehensive documentation, video tutorials, and a dedicated community forum. Enterprise plans include priority support and a dedicated account manager.',
+      'Most MVPs are ready within 2-4 weeks. Complex enterprise solutions may take 6-12 weeks. We prioritize speed without compromising quality, using our proven frameworks and rapid prototyping methodology.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens after the initial launch?',
+    answer:
+      'We provide ongoing technical support, maintenance, and can scale the solution as your business grows. We also offer continuous deployment pipelines and iterative enhancement based on user feedback.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you structure pricing?',
+    answer:
+      'We offer flexible engagement models: fixed-price projects for well-defined scopes, time & materials for evolving requirements, and dedicated team arrangements for long-term partnerships. Contact us for a customized quote.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you work with startups?',
+    answer:
+      'Absolutely! We love working with startups and understand budget constraints. We offer startup-friendly packages and can discuss equity arrangements for the right partnerships. Let\'s talk about your vision!',
   },
 ]
 
 export function FAQ() {
+  const [activeCategory, setActiveCategory] = useState('general')
+
+  const filteredFaqs = faqs.filter(faq => faq.category === activeCategory)
+
   return (
-    <section className="py-24 bg-primary-navy">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-b from-[#0A1628] to-[#000000] overflow-hidden relative">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-vibrant-orange/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-electric-cyan/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <FadeIn className="text-center mb-16">
-          <p className="text-primary-cyan font-semibold mb-4 uppercase tracking-wider">
-            FAQ
+          <p className="text-electric-cyan font-semibold mb-4 uppercase tracking-wider text-sm">
+            Got Questions?
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Frequently asked
-            <br />
-            <span className="text-gradient">questions</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-theme-primary">
+            Everything You Need to <span className="text-gradient-enhanced">Know</span>
           </h2>
+          <p className="text-theme-secondary-bright text-lg max-w-2xl mx-auto">
+            Quick answers about our services, process, timelines, and pricing.
+            Can't find what you're looking for? We're here to help.
+          </p>
         </FadeIn>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-          {/* FAQ Accordion */}
-          <div className="md:col-span-2">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <FadeIn key={index} delay={index * 0.1}>
-                  <AccordionItem
-                    value={`item-${index}`}
-                    className="bg-neutral-darker-gray border border-white/10 px-6 rounded-lg"
-                  >
-                    <AccordionTrigger className="text-left text-lg">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-base">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                </FadeIn>
-              ))}
-            </Accordion>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-8">
+            {/* Left Sidebar - Categories */}
+            <div className="lg:col-span-4">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="lg:sticky lg:top-24 space-y-3"
+              >
+                <h3 className="text-xl font-bold text-theme-primary mb-6 px-2">Browse by Topic</h3>
 
-          {/* Contact Card */}
-          <FadeIn delay={0.3}>
-            <Card className="h-fit sticky top-24 bg-primary-cyan/10 border-primary-cyan/30">
-              <CardContent className="pt-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-cyan/20 flex items-center justify-center">
-                  <MessageCircle className="text-primary-cyan" size={32} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Got any Questions?</h3>
-                <p className="text-neutral-medium-gray mb-6 text-sm">
-                  Let us know! Reach out and our team will get right back to you.
-                </p>
-                <Button variant="primary" size="lg" className="w-full">
-                  Contact us
-                </Button>
-              </CardContent>
-            </Card>
-          </FadeIn>
+                {faqCategories.map((category) => {
+                  const Icon = category.icon
+                  const isActive = activeCategory === category.id
+
+                  return (
+                    <motion.button
+                      key={category.id}
+                      whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={cn(
+                        "w-full flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 text-left",
+                        "border backdrop-blur-md",
+                        isActive
+                          ? category.color === 'cyan'
+                            ? 'bg-electric-cyan/10 border-electric-cyan/50 shadow-[0_0_20px_rgba(0,163,255,0.2)]'
+                            : 'bg-vibrant-orange/10 border-vibrant-orange/50 shadow-[0_0_20px_rgba(255,107,53,0.2)]'
+                          : 'bg-white/5 border-white/10 hover:border-white/20'
+                      )}
+                    >
+                      <div
+                        className={cn(
+                          "w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300",
+                          isActive
+                            ? category.color === 'cyan'
+                              ? 'bg-electric-cyan/20'
+                              : 'bg-vibrant-orange/20'
+                            : 'bg-white/5'
+                        )}
+                      >
+                        <Icon
+                          className={cn(
+                            "transition-all duration-300",
+                            isActive
+                              ? category.color === 'cyan'
+                                ? 'text-electric-cyan'
+                                : 'text-vibrant-orange'
+                              : 'text-theme-secondary-bright'
+                          )}
+                          size={24}
+                        />
+                      </div>
+                      <span
+                        className={cn(
+                          "font-semibold text-lg transition-colors duration-300",
+                          isActive ? 'text-theme-primary' : 'text-theme-secondary-bright'
+                        )}
+                      >
+                        {category.label}
+                      </span>
+                    </motion.button>
+                  )
+                })}
+
+                {/* Contact Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="mt-8 p-6 rounded-2xl backdrop-blur-md bg-gradient-to-br from-vibrant-orange/10 to-transparent border border-vibrant-orange/30"
+                >
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-vibrant-orange/20 flex items-center justify-center">
+                    <MessageCircle className="text-vibrant-orange" size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-center text-theme-primary">Still have questions?</h3>
+                  <p className="text-theme-secondary-bright mb-4 text-sm text-center">
+                    Let's discuss your project and how we can help bring your vision to life.
+                  </p>
+                  <motion.a
+                    href="#contact"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="block w-full py-3 px-4 bg-vibrant-orange hover:bg-vibrant-orange/90 text-white font-semibold rounded-xl text-center transition-all duration-300 shadow-[0_0_20px_rgba(255,107,53,0.3)]"
+                  >
+                    Talk to Us
+                  </motion.a>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Right Content - FAQ Accordion */}
+            <div className="lg:col-span-8">
+              <motion.div
+                key={activeCategory}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Accordion type="single" collapsible className="space-y-4">
+                  {filteredFaqs.map((faq, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <AccordionItem
+                        value={`item-${index}`}
+                        className="bg-white/5 backdrop-blur-md border border-white/10 hover:border-electric-cyan/30 px-6 rounded-2xl transition-all duration-300 overflow-hidden"
+                      >
+                        <AccordionTrigger className="text-left text-lg font-semibold text-theme-primary hover:text-electric-cyan transition-colors duration-300 py-6">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-base text-theme-secondary-bright leading-relaxed pb-6">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </motion.div>
+                  ))}
+                </Accordion>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

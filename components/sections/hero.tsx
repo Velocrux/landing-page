@@ -202,16 +202,23 @@ export function Hero() {
             {/* CTA Buttons */}
             <FadeIn delay={0.5}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <Button variant="primary" size="xl">
-                  Get Started
+                <Button variant="primary" size="xl" asChild>
+                  <a href="#contact">Get Started</a>
                 </Button>
                 <div className="button-glow-border">
                   <Button
                     variant="secondary"
                     size="xl"
                     className="relative z-10 bg-theme-secondary hover:bg-theme-secondary hover:scale-100 !border-none"
+                    asChild
                   >
-                    Talk to Us
+                    <a
+                      href="https://calendly.com/kauser-velocrux/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Talk to Us
+                    </a>
                   </Button>
                 </div>
               </div>

@@ -19,7 +19,7 @@ export function Header() {
   return (
     <>
       <header
-          className={cn(
+        className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
             ? 'bg-theme-primary/90 backdrop-blur-lg border-b border-theme-primary shadow-lg'
@@ -30,16 +30,16 @@ export function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group">
-              <div className="relative w-12 h-12 flex-shrink-0">
-                <Image 
-                  src="/logo.png" 
-                  alt="Velocrux Logo" 
+              <div className="relative w-16 h-16 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Velocrux Logo"
                   fill
                   className="object-contain"
                   priority
                 />
               </div>
-              <span className="text-xl font-bold text-theme-primary hidden sm:block">
+              <span className="text-2xl font-bold text-theme-primary hidden sm:block">
                 {siteConfig.name}
               </span>
             </Link>
