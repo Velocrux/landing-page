@@ -21,7 +21,7 @@ const contactMethods = [
     description: 'Write to us about your project',
     action: 'kauser@velocrux.com',
     color: 'cyan',
-    link: 'mailto:kauser@velocrux.com',
+    link: 'https://mail.google.com/mail/?view=cm&fs=1&to=kauser@velocrux.com',
   },
   {
     icon: Calendar,
