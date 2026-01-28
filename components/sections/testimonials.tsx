@@ -9,10 +9,10 @@ import { useState } from 'react'
 const testimonials = [
   {
     quote:
-      'Velocrux delivered our healthcare AI platform in just 6 weeks. Their expertise in the medical domain and rapid prototyping approach exceeded our expectations.',
-    name: 'Dr. Sarah Chen',
-    title: 'CTO, MediTech Solutions',
-    industry: 'Healthcare',
+      'Velocrux delivered our education AI platform in just 6 weeks. Their expertise in the education domain and rapid prototyping approach exceeded our expectations.',
+    name: 'Javeed Pasha',
+    title: 'Managing Director, MCA',
+    industry: 'Education',
     rating: 5,
     featured: true,
   },
@@ -104,7 +104,7 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-2xl md:text-3xl font-light text-theme-primary leading-relaxed mb-8 text-center md:text-left">
+                <blockquote className="text-xl md:text-2xl font-light text-theme-primary leading-relaxed mb-8 text-center md:text-left">
                   &ldquo;{featuredTestimonial.quote}&rdquo;
                 </blockquote>
 
