@@ -30,16 +30,6 @@ export function CTA() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="xl">
-                Get Started - Free
-              </Button>
-              <Button variant="secondary" size="xl">
-                View Pricing
-              </Button>
-            </div>
-          </FadeIn>
 
           {/* Floating Decoration Elements */}
           <FloatAnimation

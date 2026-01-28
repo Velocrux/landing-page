@@ -5,7 +5,6 @@ import { ProductFeatures } from '@/components/sections/product-features'
 import { Testimonials } from '@/components/sections/testimonials'
 import { FAQ } from '@/components/sections/faq'
 import { Contact } from '@/components/sections/contact'
-import { CTA } from '@/components/sections/cta'
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
         <FAQ />
       </div>
       <Contact />
-      <CTA />
     </main>
   )
 }
