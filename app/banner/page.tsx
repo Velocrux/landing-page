@@ -42,8 +42,8 @@ export default function LinkedInBannerStatic() {
                 style={{ animationDelay: '4s' }} />
             </div>
 
-            {/* Content Overlay */}
-            <div className="absolute inset-0 z-10 flex items-center justify-end px-16 gap-8">
+          {/* Content Overlay */}
+          <div className="absolute inset-0 z-10 flex items-center justify-end pr-8 gap-8">
               {/* Left: Service Cards with Contact Info - aligned with tagline */}
               <div className="flex flex-col gap-6 mt-16">
                 {/* Service Cards Row */}
