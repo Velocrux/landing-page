@@ -44,8 +44,8 @@ export default function LinkedInBannerStatic() {
 
             {/* Content Overlay */}
             <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
-              {/* Left: Redesigned Service Cards */}
-              <div className="flex gap-8">
+              {/* Left: Redesigned Service Cards - moved right */}
+              <div className="flex gap-8 ml-32">
                 {/* AI Solutions Card */}
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
