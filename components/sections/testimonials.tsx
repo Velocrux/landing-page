@@ -72,7 +72,7 @@ export function Testimonials() {
             Trusted by <span className="text-gradient-enhanced">Innovators</span>
           </h2>
           <p className="text-theme-secondary-bright text-lg max-w-2xl mx-auto">
-            Real results from real partnerships. See how we've helped businesses
+            Real results from real partnerships. See how we&apos;ve helped businesses
             transform their ideas into impactful digital solutions.
           </p>
         </FadeIn>
@@ -105,7 +105,7 @@ export function Testimonials() {
 
                 {/* Quote */}
                 <blockquote className="text-2xl md:text-3xl font-light text-theme-primary leading-relaxed mb-8 text-center md:text-left">
-                  "{featuredTestimonial.quote}"
+                  &ldquo;{featuredTestimonial.quote}&rdquo;
                 </blockquote>
 
                 {/* Author info */}
@@ -156,7 +156,7 @@ export function Testimonials() {
 
                   {/* Quote */}
                   <p className="text-theme-secondary-bright text-sm leading-relaxed mb-6 line-clamp-4">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </p>
 
                   {/* Author */}

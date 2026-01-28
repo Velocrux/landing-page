@@ -93,7 +93,7 @@ export function FAQ() {
           </h2>
           <p className="text-theme-secondary-bright text-lg max-w-2xl mx-auto">
             Quick answers about our services, process, timelines, and pricing.
-            Can't find what you're looking for? We're here to help.
+            Can&apos;t find what you&apos;re looking for? We&apos;re here to help.
           </p>
         </FadeIn>
 
@@ -176,7 +176,7 @@ export function FAQ() {
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-center text-theme-primary">Still have questions?</h3>
                   <p className="text-theme-secondary-bright mb-4 text-sm text-center">
-                    Let's discuss your project and how we can help bring your vision to life.
+                    Let&apos;s discuss your project and how we can help bring your vision to life.
                   </p>
                   <motion.a
                     href="#contact"

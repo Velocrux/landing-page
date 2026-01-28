@@ -84,7 +84,7 @@ export default function ContactPage() {
           <FadeIn className="text-center max-w-4xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-vibrant-orange/20 border border-vibrant-orange/30 mb-6">
               <Zap className="text-vibrant-orange" size={16} />
-              <span className="text-sm font-semibold text-vibrant-orange">Let's Build Together</span>
+              <span className="text-sm font-semibold text-vibrant-orange">Let&apos;s Build Together</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-theme-primary">
               Ready to <span className="text-gradient-enhanced">Transform</span>
@@ -92,7 +92,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl md:text-2xl text-theme-secondary-bright max-w-3xl mx-auto">
               From rapid prototypes to full-scale AI solutions.
-              Let's discuss how we can bring your vision to life.
+              Let&apos;s discuss how we can bring your vision to life.
             </p>
           </FadeIn>
 
@@ -150,7 +150,7 @@ export default function ContactPage() {
                 <div className="relative z-10">
                   <h2 className="text-3xl md:text-4xl font-bold mb-3 text-theme-primary">Tell Us About Your Project</h2>
                   <p className="text-theme-secondary-bright mb-8 text-base">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    Fill out the form below and we&apos;ll get back to you within 24 hours.
                   </p>
                   <ContactForm />
                 </div>
