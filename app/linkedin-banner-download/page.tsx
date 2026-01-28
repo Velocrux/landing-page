@@ -126,14 +126,8 @@ export default function LinkedInBannerDownload() {
               {/* Right: Logo and Branding */}
               <div className="flex items-center gap-6">
                 <div className="text-right">
-                  <h1 className="text-5xl font-bold mb-2 text-white">
-                    <span
-                      className="bg-gradient-to-r from-electric-cyan via-white to-vibrant-orange bg-clip-text text-transparent"
-                      style={{
-                        backgroundSize: '200% 100%',
-                        animation: 'gradient-shift 3s ease infinite',
-                      }}
-                    >
+                  <h1 className="text-5xl font-bold mb-2">
+                    <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                       Velocrux
                     </span>
                   </h1>
@@ -141,7 +135,7 @@ export default function LinkedInBannerDownload() {
                     Think AI, Think of Us.
                   </p>
                 </div>
-                <div className="relative w-24 h-24 flex-shrink-0">
+                <div className="relative w-48 h-48 flex-shrink-0">
                   <Image
                     src="/logo.png"
                     alt="Velocrux Logo"
