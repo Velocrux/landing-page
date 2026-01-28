@@ -16,6 +16,25 @@ export function Header() {
   const { scrollY } = useScroll()
   const isScrolled = scrollY > 50
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const sectionId = href.replace('#', '')
+    const element = document.getElementById(sectionId)
+    
+    if (element) {
+      const headerHeight = 80 // Height of fixed header
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - headerHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+    
+    setIsMenuOpen(false)
+  }
+
   return (
     <>
       <header
@@ -29,7 +48,11 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group">
+            <a 
+              href="#home" 
+              onClick={(e) => handleNavClick(e, '#home')}
+              className="flex items-center space-x-3 hover:opacity-80 transition-opacity group"
+            >
               <div className="relative w-16 h-16 flex-shrink-0">
                 <Image
                   src="/logo.png"
@@ -42,26 +65,34 @@ export function Header() {
               <span className="text-2xl font-bold text-theme-primary hidden sm:block">
                 {siteConfig.name}
               </span>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               {siteConfig.mainNav.map((item) => (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
-                  className="text-theme-secondary hover:text-theme-primary transition-colors relative group"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-theme-secondary hover:text-theme-primary transition-colors relative group cursor-pointer"
                 >
                   {item.title}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-accent group-hover:w-full transition-all duration-300" />
-                </Link>
+                </a>
               ))}
             </nav>
 
             {/* CTA Button & Theme Toggle */}
             <div className="hidden md:flex items-center space-x-4">
               <ThemeToggle variant="icon" />
-              <Button variant="secondary" size="md">
+              <Button 
+                variant="secondary" 
+                size="md"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavClick(e as any, '#contact')
+                }}
+              >
                 Get Started
               </Button>
             </div>

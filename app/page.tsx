@@ -4,17 +4,29 @@ import { Features } from '@/components/sections/features'
 import { ProductFeatures } from '@/components/sections/product-features'
 import { Testimonials } from '@/components/sections/testimonials'
 import { FAQ } from '@/components/sections/faq'
+import { Contact } from '@/components/sections/contact'
 import { CTA } from '@/components/sections/cta'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      <TrustBar />
-      <Features />
-      <ProductFeatures />
-      <Testimonials />
-      <FAQ />
+      <div id="home">
+        <Hero />
+        <TrustBar />
+      </div>
+      <div id="features">
+        <Features />
+      </div>
+      <div id="why-us">
+        <ProductFeatures />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
+      <Contact />
       <CTA />
     </main>
   )

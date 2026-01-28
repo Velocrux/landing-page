@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -13,6 +12,25 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const sectionId = href.replace('#', '')
+    const element = document.getElementById(sectionId)
+    
+    if (element) {
+      const headerHeight = 80
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - headerHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+    
+    onClose()
+  }
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -37,10 +55,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <div className="p-6">
               {/* Logo */}
               <div className="mb-8">
-                <Link
-                  href="/"
+                <a
+                  href="#home"
                   className="flex items-center space-x-3 group"
-                  onClick={onClose}
+                  onClick={(e) => handleNavClick(e, '#home')}
                 >
                   <div className="relative w-10 h-10 flex-shrink-0">
                     <Image 
@@ -53,7 +71,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <span className="text-xl font-bold text-theme-primary">
                     {siteConfig.name}
                   </span>
-                </Link>
+                </a>
               </div>
 
               {/* Navigation Links */}
@@ -65,13 +83,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Link
+                    <a
                       href={item.href}
-                      onClick={onClose}
-                      className="block px-4 py-3 rounded-lg text-theme-secondary hover:text-theme-primary hover:bg-theme-tertiary/20 transition-all"
+                      onClick={(e) => handleNavClick(e, item.href)}
+                      className="block px-4 py-3 rounded-lg text-theme-secondary hover:text-theme-primary hover:bg-theme-tertiary/20 transition-all cursor-pointer"
                     >
                       {item.title}
-                    </Link>
+                    </a>
                   </motion.div>
                 ))}
               </nav>
@@ -93,10 +111,20 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 transition={{ delay: 0.5 }}
                 className="space-y-3"
               >
-                <Button variant="primary" size="lg" className="w-full">
+                <Button 
+                  variant="primary" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={(e: any) => handleNavClick(e, '#contact')}
+                >
                   Get Started
                 </Button>
-                <Button variant="outline" size="lg" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={(e: any) => handleNavClick(e, '#contact')}
+                >
                   Contact Us
                 </Button>
               </motion.div>

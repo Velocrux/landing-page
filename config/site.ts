@@ -11,27 +11,27 @@ export const siteConfig = {
   mainNav: [
     {
       title: 'Home',
-      href: '/',
+      href: '#home',
     },
     {
-      title: 'Products',
-      href: '/products',
+      title: 'Features',
+      href: '#features',
     },
     {
-      title: 'Services',
-      href: '/services',
+      title: 'Why Us',
+      href: '#why-us',
     },
     {
-      title: 'AI Solutions',
-      href: '/ai-solutions',
+      title: 'Testimonials',
+      href: '#testimonials',
     },
     {
-      title: 'About',
-      href: '/about',
+      title: 'FAQ',
+      href: '#faq',
     },
     {
       title: 'Contact',
-      href: '/contact',
+      href: '#contact',
     },
   ],
 }
