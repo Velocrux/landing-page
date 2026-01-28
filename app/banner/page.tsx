@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Sparkles, Zap, Brain } from 'lucide-react'
+import { Sparkles, Zap, Brain, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
 
 export default function LinkedInBannerStatic() {
@@ -43,9 +43,9 @@ export default function LinkedInBannerStatic() {
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
-              {/* Left: Redesigned Service Cards - moved right */}
-              <div className="flex gap-8 ml-32">
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-16">
+              {/* Top: Service Cards */}
+              <div className="flex gap-8 mb-6">
                 {/* AI Solutions Card */}
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
@@ -80,8 +80,27 @@ export default function LinkedInBannerStatic() {
                 </div>
               </div>
 
-              {/* Right: Logo and Branding */}
-              <div className="flex items-center gap-6">
+              {/* Bottom: Contact Information */}
+              <div className="flex items-center gap-8">
+                {/* Email */}
+                <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+                  <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
+                    <Mail className="text-electric-cyan" size={16} />
+                  </div>
+                  <span className="text-white font-semibold text-sm">kauser@velocrux.com</span>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+                  <div className="w-8 h-8 rounded-lg bg-vibrant-orange/20 flex items-center justify-center">
+                    <Phone className="text-vibrant-orange" size={16} />
+                  </div>
+                  <span className="text-white font-semibold text-sm">+91 76193 97846</span>
+                </div>
+              </div>
+
+              {/* Right: Logo and Branding - Positioned absolutely */}
+              <div className="absolute right-16 flex items-center gap-6">
                 <div className="text-center">
                   <h2 className="text-[5rem] font-bold mb-2 leading-none">
                     <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
