@@ -87,7 +87,7 @@ export default function LinkedInBanner() {
             {/* Right: Logo and Branding */}
             <div className="flex items-center gap-6">
               <div className="text-right">
-                <h1 className="text-5xl font-bold mb-2">
+                <h1 className="text-[9rem] font-bold mb-2 leading-none">
                   <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">Velocrux</span>
                 </h1>
                 <p className="text-2xl text-electric-cyan font-bold">
