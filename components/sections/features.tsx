@@ -33,7 +33,7 @@ const features = [
     title: 'Prototype Development',
     description:
       'Rapid prototyping and MVP development to validate your ideas quickly with functional demos and proof-of-concept applications.',
-    color: 'orange' as const,
+    color: 'cyan' as const,
     images: [
       { src: '/prototype-1.png', label: '' },
       { src: '/prototype-2.png', label: '' },
