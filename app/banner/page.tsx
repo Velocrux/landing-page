@@ -70,13 +70,13 @@ export default function LinkedInBannerStatic() {
 
               {/* Right: Logo and Branding */}
               <div className="flex items-center gap-6">
-                <div className="text-right">
-                  <h2 className="text-[9rem] font-bold mb-2 leading-none">
+                <div className="text-center">
+                  <h2 className="text-[5rem] font-bold mb-2 leading-none">
                     <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                       Velocrux
                     </span>
                   </h2>
-                  <p className="text-2xl text-electric-cyan font-bold">
+                  <p className="text-3xl text-electric-cyan font-bold">
                     Think AI, Think of Us.
                   </p>
                 </div>
