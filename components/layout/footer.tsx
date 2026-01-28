@@ -11,7 +11,7 @@ export function Footer() {
     e.preventDefault()
     const sectionId = href.replace('#', '')
     const element = document.getElementById(sectionId)
-    
+
     if (element) {
       const headerHeight = 80
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -82,11 +82,11 @@ export function Footer() {
             <p className="text-theme-secondary-bright mb-6 text-sm leading-relaxed">
               Transforming ideas into impactful digital solutions with AI-powered innovation.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <a 
-                href="mailto:kauser@velocrux.com" 
+              <a
+                href="mailto:kauser@velocrux.com"
                 className="flex items-center gap-2 text-theme-secondary-bright hover:text-electric-cyan transition-colors text-sm group"
               >
                 <div className="w-8 h-8 rounded-lg bg-electric-cyan/10 flex items-center justify-center group-hover:bg-electric-cyan/20 transition-colors">

@@ -23,6 +23,9 @@ const features = [
       { src: '/education.png', label: 'Education' },
       { src: '/healthcare.png', label: 'Health Care' },
       { src: '/e-commerce.png', label: 'E-Commerce' },
+      { src: '/ai-multimodal.png', label: 'Multimodal AI' },
+      { src: '/ai-vision.png', label: 'AI Vision' },
+      { src: '/ai-holographic.png', label: 'Neural Networks' },
     ],
   },
   {
