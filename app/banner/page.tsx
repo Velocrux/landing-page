@@ -43,64 +43,67 @@ export default function LinkedInBannerStatic() {
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-16">
-              {/* Top: Service Cards */}
-              <div className="flex gap-8 mb-6">
-                {/* AI Solutions Card */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
-                      <Brain className="text-electric-cyan" size={32} />
+            <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
+              {/* Left: Service Cards with Contact Info */}
+              <div className="flex flex-col gap-6">
+                {/* Service Cards Row */}
+                <div className="flex gap-8">
+                  {/* AI Solutions Card */}
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                    <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
+                        <Brain className="text-electric-cyan" size={32} />
+                      </div>
+                      <span className="text-white font-bold text-base tracking-wide">AI Solutions</span>
                     </div>
-                    <span className="text-white font-bold text-base tracking-wide">AI Solutions</span>
+                  </div>
+
+                  {/* Rapid Build Card */}
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-vibrant-orange/30 to-vibrant-orange/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                    <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(255,107,53,0.2)] hover:shadow-[0_8px_48px_rgba(255,107,53,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-vibrant-orange/40 to-vibrant-orange/20 flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.5)] group-hover:shadow-[0_0_40px_rgba(255,107,53,0.7)] transition-all duration-500">
+                        <Zap className="text-vibrant-orange" size={32} />
+                      </div>
+                      <span className="text-white font-bold text-base tracking-wide">Rapid Build</span>
+                    </div>
+                  </div>
+
+                  {/* Innovation Card */}
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                    <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
+                        <Sparkles className="text-electric-cyan" size={32} />
+                      </div>
+                      <span className="text-white font-bold text-base tracking-wide">Innovation</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Rapid Build Card */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-orange/30 to-vibrant-orange/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(255,107,53,0.2)] hover:shadow-[0_8px_48px_rgba(255,107,53,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-vibrant-orange/40 to-vibrant-orange/20 flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.5)] group-hover:shadow-[0_0_40px_rgba(255,107,53,0.7)] transition-all duration-500">
-                      <Zap className="text-vibrant-orange" size={32} />
+                {/* Contact Information Row */}
+                <div className="flex items-center gap-6 ml-4">
+                  {/* Email */}
+                  <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+                    <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
+                      <Mail className="text-electric-cyan" size={16} />
                     </div>
-                    <span className="text-white font-bold text-base tracking-wide">Rapid Build</span>
+                    <span className="text-white font-semibold text-sm">kauser@velocrux.com</span>
                   </div>
-                </div>
 
-                {/* Innovation Card */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
-                      <Sparkles className="text-electric-cyan" size={32} />
+                  {/* Phone */}
+                  <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+                    <div className="w-8 h-8 rounded-lg bg-vibrant-orange/20 flex items-center justify-center">
+                      <Phone className="text-vibrant-orange" size={16} />
                     </div>
-                    <span className="text-white font-bold text-base tracking-wide">Innovation</span>
+                    <span className="text-white font-semibold text-sm">+91 76193 97846</span>
                   </div>
                 </div>
               </div>
 
-              {/* Bottom: Contact Information */}
-              <div className="flex items-center gap-8">
-                {/* Email */}
-                <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
-                  <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
-                    <Mail className="text-electric-cyan" size={16} />
-                  </div>
-                  <span className="text-white font-semibold text-sm">kauser@velocrux.com</span>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
-                  <div className="w-8 h-8 rounded-lg bg-vibrant-orange/20 flex items-center justify-center">
-                    <Phone className="text-vibrant-orange" size={16} />
-                  </div>
-                  <span className="text-white font-semibold text-sm">+91 76193 97846</span>
-                </div>
-              </div>
-
-              {/* Right: Logo and Branding - Positioned absolutely */}
-              <div className="absolute right-16 flex items-center gap-6">
+              {/* Right: Logo and Branding */}
+              <div className="flex items-center gap-6">
                 <div className="text-center">
                   <h2 className="text-[5rem] font-bold mb-2 leading-none">
                     <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
