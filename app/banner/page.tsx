@@ -44,8 +44,8 @@ export default function LinkedInBannerStatic() {
 
             {/* Content Overlay */}
             <div className="absolute inset-0 z-10 flex items-center justify-end px-16 gap-8">
-              {/* Left: Service Cards with Contact Info */}
-              <div className="flex flex-col gap-6">
+              {/* Left: Service Cards with Contact Info - aligned with tagline */}
+              <div className="flex flex-col gap-6 mt-16">
                 {/* Service Cards Row */}
                 <div className="flex gap-8">
                   {/* AI Solutions Card */}
