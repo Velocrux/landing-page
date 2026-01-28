@@ -76,7 +76,7 @@ export default function LinkedInBannerStatic() {
                       Velocrux
                     </span>
                   </h2>
-                  <p className="text-3xl text-vibrant-orange font-bold">
+                  <p className="text-3xl text-electric-cyan font-bold">
                     Think AI, Think of Us.
                   </p>
                 </div>
