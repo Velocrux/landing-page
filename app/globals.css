@@ -1448,3 +1448,13 @@ body {
   background: rgba(71, 85, 105, 0.6);
 }
 
+/* Gradient shift animation for LinkedIn banner */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
