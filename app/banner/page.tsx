@@ -23,48 +23,60 @@ export default function LinkedInBannerStatic() {
                 background: 'linear-gradient(135deg, #0A1628 0%, #000000 50%, #0A1628 100%)',
               }}
             >
-              {/* Animated glow orbs - moved up */}
-              <div className="glow-orb absolute top-[-10%] left-[10%] w-[600px] h-[600px]" />
-              <div className="glow-orb absolute top-[10%] right-[15%] w-[500px] h-[500px]" 
-                   style={{ animationDelay: '2s' }} />
-              <div className="glow-orb absolute bottom-[-5%] left-[35%] w-[450px] h-[450px]"
-                   style={{ animationDelay: '4s' }} />
+              {/* Animated glow orbs - exactly from hero section */}
+              <div className="glow-orb absolute top-[5%] left-[10%] w-[600px] h-[600px]" />
+              <div className="glow-orb absolute top-[30%] right-[15%] w-[500px] h-[500px]"
+                style={{ animationDelay: '2s' }} />
+              <div className="glow-orb absolute bottom-[10%] left-[35%] w-[450px] h-[450px]"
+                style={{ animationDelay: '4s' }} />
 
-              {/* Animated light streaks - moved up */}
-              <div className="light-streak absolute top-[5%] left-[15%] w-1 h-48" />
-              <div className="light-streak orange absolute top-[30%] right-[20%] w-1 h-64"
-                   style={{ animationDelay: '1.5s' }} />
-              <div className="light-streak absolute bottom-[10%] left-[60%] w-1 h-56"
-                   style={{ animationDelay: '3s' }} />
-              <div className="light-streak orange absolute top-[20%] left-[40%] w-1 h-40"
-                   style={{ animationDelay: '2.5s' }} />
-              <div className="light-streak absolute bottom-[5%] right-[35%] w-1 h-52"
-                   style={{ animationDelay: '4s' }} />
+              {/* Animated light streaks - exactly from hero section */}
+              <div className="light-streak absolute top-[20%] left-[15%] w-1 h-48" />
+              <div className="light-streak orange absolute top-[50%] right-[20%] w-1 h-64"
+                style={{ animationDelay: '1.5s' }} />
+              <div className="light-streak absolute bottom-[25%] left-[60%] w-1 h-56"
+                style={{ animationDelay: '3s' }} />
+              <div className="light-streak orange absolute top-[35%] left-[40%] w-1 h-40"
+                style={{ animationDelay: '2.5s' }} />
+              <div className="light-streak absolute bottom-[15%] right-[35%] w-1 h-52"
+                style={{ animationDelay: '4s' }} />
             </div>
 
             {/* Content Overlay */}
             <div className="absolute inset-0 z-10 flex items-center justify-between px-16">
-              {/* Left: Key Features */}
-              <div className="flex gap-6">
-                <div className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-electric-cyan/30">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/10 flex items-center justify-center">
-                    <Brain className="text-electric-cyan" size={24} />
+              {/* Left: Redesigned Service Cards */}
+              <div className="flex gap-8">
+                {/* AI Solutions Card */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
+                      <Brain className="text-electric-cyan" size={32} />
+                    </div>
+                    <span className="text-white font-bold text-base tracking-wide">AI Solutions</span>
                   </div>
-                  <span className="text-white font-semibold text-sm">AI Solutions</span>
                 </div>
 
-                <div className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-vibrant-orange/30">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-vibrant-orange/30 to-vibrant-orange/10 flex items-center justify-center">
-                    <Zap className="text-vibrant-orange" size={24} />
+                {/* Rapid Build Card */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-orange/30 to-vibrant-orange/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(255,107,53,0.2)] hover:shadow-[0_8px_48px_rgba(255,107,53,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-vibrant-orange/40 to-vibrant-orange/20 flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.5)] group-hover:shadow-[0_0_40px_rgba(255,107,53,0.7)] transition-all duration-500">
+                      <Zap className="text-vibrant-orange" size={32} />
+                    </div>
+                    <span className="text-white font-bold text-base tracking-wide">Rapid Build</span>
                   </div>
-                  <span className="text-white font-semibold text-sm">Rapid Build</span>
                 </div>
 
-                <div className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-electric-cyan/30">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/10 flex items-center justify-center">
-                    <Sparkles className="text-electric-cyan" size={24} />
+                {/* Innovation Card */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/30 to-electric-cyan/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                  <div className="relative flex flex-col items-center gap-3 p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,163,255,0.2)] hover:shadow-[0_8px_48px_rgba(0,163,255,0.4)] transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-cyan/40 to-electric-cyan/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.5)] group-hover:shadow-[0_0_40px_rgba(0,163,255,0.7)] transition-all duration-500">
+                      <Sparkles className="text-electric-cyan" size={32} />
+                    </div>
+                    <span className="text-white font-bold text-base tracking-wide">Innovation</span>
                   </div>
-                  <span className="text-white font-semibold text-sm">Innovation</span>
                 </div>
               </div>
 
