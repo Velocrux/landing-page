@@ -196,19 +196,6 @@ export function Footer() {
             <p className="text-theme-secondary text-sm">
               © {currentYear} {siteConfig.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-4 text-sm">
-              <span className="text-theme-secondary">
-                Built with
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="px-2 py-1 rounded bg-electric-cyan/10 text-electric-cyan text-xs font-semibold">
-                  Next.js
-                </span>
-                <span className="px-2 py-1 rounded bg-vibrant-orange/10 text-vibrant-orange text-xs font-semibold">
-                  AI Powered
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
