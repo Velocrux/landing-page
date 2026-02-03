@@ -38,6 +38,7 @@ export function Footer() {
     'Prototype Development',
     'Digital Services',
     'Innovation Lab',
+    'ArabAudit',
     'Custom Development',
     'Consulting',
   ]

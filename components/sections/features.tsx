@@ -1,6 +1,6 @@
 'use client'
 
-import { Zap, Brain, Code, Rocket, Sparkles, ChevronRight, ChevronLeft } from 'lucide-react'
+import { Zap, Brain, Code, Rocket, Sparkles, FileCheck, ChevronRight, ChevronLeft } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { FadeIn } from '@/components/animations/fade-in'
 import { StaggerContainer, staggerItem } from '@/components/animations/stagger-container'
@@ -60,6 +60,16 @@ const features = [
     color: 'orange' as const,
     images: [
       { src: '/innovation-lab.png', label: '' },
+    ],
+  },
+  {
+    icon: FileCheck,
+    title: 'ArabAudit',
+    description:
+      'Smart Audit, Secure Growth. Our audit platform delivers transparency, compliance, and clarity for your business.',
+    color: 'cyan' as const,
+    images: [
+      { src: '/arabaudit-logo.png', label: 'ArabAudit' },
     ],
   },
 ]

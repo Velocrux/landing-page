@@ -1,6 +1,13 @@
 import Image from 'next/image'
+import { EB_Garamond } from 'next/font/google'
 import { Sparkles, Zap, Brain, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
+
+const garamond = EB_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
 
 export default function LinkedInBannerStatic() {
   return (
@@ -10,7 +17,8 @@ export default function LinkedInBannerStatic() {
           LinkedIn Banner for <span className="text-gradient-enhanced">Velocrux</span>
         </h1>
 
-        {/* LinkedIn Banner Container - 1584 x 396 */}
+        {/* LinkedIn Banner 1 - 1584 x 396 */}
+        <p className="text-sm font-semibold text-electric-cyan/90 mb-2 text-center">Banner 1</p>
         <div
           className="relative w-full mx-auto"
           style={{ width: '1584px', height: '396px', maxWidth: '100%' }}
@@ -130,6 +138,44 @@ export default function LinkedInBannerStatic() {
           </div>
         </div>
 
+        {/* LinkedIn Banner 2 - ArabAudit - 1584 x 396 (light tint background) */}
+        <p className="text-sm font-semibold text-[#8b6914] mb-2 mt-12 text-center">Banner 2 — ArabAudit</p>
+        <div
+          className="relative w-full mx-auto"
+          style={{ width: '1584px', height: '396px', maxWidth: '100%' }}
+        >
+          <div className="relative w-full h-full overflow-hidden rounded-2xl border border-gray-200 shadow-lg" style={{ backgroundColor: '#E8F2EF' }}>
+            {/* Light tint background (ArabAudit palette) */}
+            <div className="absolute inset-0" style={{ backgroundColor: '#E8F2EF' }} />
+
+            {/* Content: logo image with tagline right beneath it */}
+            <div className="absolute inset-0 z-10 flex items-center justify-end pr-12">
+              <div className="flex flex-col items-end gap-2">
+                {/* ArabAudit banner logo */}
+                <div className="relative h-[340px] w-[680px] flex-shrink-0">
+                  <Image
+                    src="/arabaudit-banner-logo.png"
+                    alt="ArabAudit — Smart Audit, Secure Growth."
+                    fill
+                    className="object-contain object-center"
+                    priority
+                    sizes="680px"
+                  />
+                  {/* Light tint box (absolute): covers tagline in logo and shows tagline text */}
+                  <div
+                    className="max-h-[40px] absolute bottom-0 right-[20%] top-[56%] left-[38%] flex items-center justify-end ml-3"
+                    style={{ backgroundColor: '#E8F2EF' }}
+                  >
+                    <span className={`text-[#b8860b]  h-auto font-[600] text-lg md:text-[22px] ${garamond.className}`}>
+                      Smart Audit, Secure Growth.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Instructions */}
         <div className="mt-8 max-w-4xl mx-auto space-y-6">
           <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
@@ -141,13 +187,13 @@ export default function LinkedInBannerStatic() {
               <p className="flex items-start gap-2">
                 <span className="text-electric-cyan font-bold text-lg">1.</span>
                 <span className="text-base">
-                  Take a screenshot of the banner above at 1584 × 396 pixels (use browser zoom to adjust if needed)
+                  Take a screenshot of either banner above at 1584 × 396 pixels (use browser zoom to adjust if needed)
                 </span>
               </p>
               <p className="flex items-start gap-2">
                 <span className="text-electric-cyan font-bold text-lg">2.</span>
                 <span className="text-base">
-                  Alternative: Right-click on the banner and "Save image as..." (if browser supports it)
+                  Alternative: Right-click on the banner and &quot;Save image as...&quot; (if browser supports it)
                 </span>
               </p>
               <p className="flex items-start gap-2">
