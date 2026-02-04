@@ -166,8 +166,8 @@ export default function LinkedInBannerStatic() {
                     className="max-h-[40px] absolute bottom-0 right-[20%] top-[56%] left-[38%] flex items-center justify-end ml-3"
                     style={{ backgroundColor: '#E8F2EF' }}
                   >
-                    <span className={`font-[600] text-lg md:text-[22px] ${garamond.className}`} style={{ color: '#D4AF37' }}>
-                      Your AI Audit Co-Pilot.
+                    <span className={`font-[600] text-lg md:text-[25px] ${garamond.className}`} style={{ color: '#D4AF37' }}>
+                      Your AI Audit Co-Pilot
                     </span>
                   </div>
                 </div>
