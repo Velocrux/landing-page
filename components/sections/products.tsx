@@ -13,7 +13,7 @@ const products = [
     name: 'ArabAudit',
     tagline: 'Your AI Audit Co-Pilot',
     description:
-      'Your AI-powered audit co-pilot for the Saudi and Arab markets. ArabAudit streamlines internal and external audits with intelligent workflows, evidence collection, and real-time dashboards. Stay compliant with NCA (National Cybersecurity Authority) requirements, SAMA (Saudi Central Bank) regulations for financial institutions, and other GCC frameworks. We help you meet local standards, automate control testing, and produce audit-ready reports—so you get transparency, compliance, and clarity without the overhead.',
+      'ArabAudit is the "Digital Co-Pilot" designed to move Saudi companies from audit panic to audit readiness 24/7. We replace messy Excel sheets and manual evidence hunting with an AI-powered platform pre-configured for NCA ECC-2024 and SAMA frameworks. Our AI Pre-Auditor automatically maps your technical logs and screenshots to 300+ controls, flagging gaps before the external auditor even arrives.',
     logo: '/arabaudit-ai-logo.png',
     logoAlt: 'ArabAudit AI — Your AI Audit Co-Pilot',
     href: '/arabaudit.com',
@@ -68,20 +68,20 @@ export function Products() {
                             : 'text-electric-cyan'
                         )}
                       />
-                      <span className="text-sm font-semibold uppercase tracking-wider text-theme-secondary-bright">
+                      <span className="text-base font-semibold uppercase tracking-wider text-theme-secondary-bright">
                         Product
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-theme-primary mb-1 group-hover:text-electric-cyan transition-colors">
+                    <h3 className="text-2xl md:text-3xl font-bold text-theme-primary mb-1 group-hover:text-electric-cyan transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-sm font-medium text-electric-cyan/90 mb-3">
+                    <p className="text-base font-medium text-electric-cyan/90 mb-3">
                       {product.tagline}
                     </p>
-                    <p className="text-theme-secondary-bright text-sm leading-relaxed flex-1">
+                    <p className="text-theme-secondary-bright text-base md:text-lg leading-relaxed flex-1">
                       {product.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 mt-4 text-electric-cyan font-semibold text-sm group-hover:gap-3 transition-all">
+                    <span className="inline-flex items-center gap-2 mt-4 text-electric-cyan font-semibold text-base group-hover:gap-3 transition-all">
                       Learn more
                       <ArrowRight className="w-4 h-4" />
                     </span>
