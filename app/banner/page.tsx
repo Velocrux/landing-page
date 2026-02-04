@@ -173,12 +173,13 @@ export default function LinkedInBannerStatic() {
                 </div>
                 {/* AI — same font as tagline (Garamond); position via top/right (e.g. top: '50%', right: '4.7rem') */}
                 <span
-                  className={`absolute text-5xl md:text-6xl font-[400] tracking-tight whitespace-nowrap select-none ${garamond.className}`}
+                  className={`absolute text-5xl md:text-6xl font-[400] whitespace-nowrap select-none ${garamond.className}`}
                   style={{
                     color: '#0B4634',
                     top: '48.8%',
-                    right: '4rem',
+                    right: '3rem',
                     transform: 'translateY(-50%)',
+                    letterSpacing: '0.1em',
                   }}
                 >
                   AI
