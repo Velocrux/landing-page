@@ -26,6 +26,7 @@ export function Footer() {
 
   const quickLinks = [
     { title: 'Home', href: '#home' },
+    { title: 'Products', href: '#products' },
     { title: 'Features', href: '#features' },
     { title: 'Why Choose Us', href: '#why-us' },
     { title: 'Testimonials', href: '#testimonials' },

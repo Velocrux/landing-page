@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/hero'
 import { TrustBar } from '@/components/sections/trust-bar'
+import { Products } from '@/components/sections/products'
 import { Features } from '@/components/sections/features'
 import { ProductFeatures } from '@/components/sections/product-features'
 import { Testimonials } from '@/components/sections/testimonials'
@@ -12,6 +13,9 @@ export default function Home() {
       <div id="home">
         <Hero />
         <TrustBar />
+      </div>
+      <div id="products">
+        <Products />
       </div>
       <div id="features">
         <Features />

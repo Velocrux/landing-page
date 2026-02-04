@@ -14,6 +14,10 @@ export const siteConfig = {
       href: '#home',
     },
     {
+      title: 'Products',
+      href: '#products',
+    },
+    {
       title: 'Services',
       href: '#features',
     },
