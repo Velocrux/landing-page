@@ -148,9 +148,9 @@ export default function LinkedInBannerStatic() {
             {/* Light tint background (ArabAudit palette) */}
             <div className="absolute inset-0" style={{ backgroundColor: '#E8F2EF' }} />
 
-            {/* Content: logo image with tagline right beneath it */}
+            {/* Content: logo + AI text (AI is absolutely positioned — adjust top/right/left/bottom to move) */}
             <div className="absolute inset-0 z-10 flex items-center justify-end pr-12">
-              <div className="flex flex-col items-end gap-2">
+              <div className="relative flex flex-col items-end gap-2">
                 {/* ArabAudit banner logo */}
                 <div className="relative h-[340px] w-[680px] flex-shrink-0">
                   <Image
@@ -161,16 +161,28 @@ export default function LinkedInBannerStatic() {
                     priority
                     sizes="680px"
                   />
-                  {/* Light tint box (absolute): covers tagline in logo and shows tagline text */}
+                  {/* Light tint box (absolute): tagline text */}
                   <div
                     className="max-h-[40px] absolute bottom-0 right-[20%] top-[56%] left-[38%] flex items-center justify-end ml-3"
                     style={{ backgroundColor: '#E8F2EF' }}
                   >
-                    <span className={`text-[#b8860b]  h-auto font-[600] text-lg md:text-[22px] ${garamond.className}`}>
-                      Smart Audit, Secure Growth.
+                    <span className={`font-[600] text-lg md:text-[22px] ${garamond.className}`} style={{ color: '#D4AF37' }}>
+                      Your AI Audit Co-Pilot.
                     </span>
                   </div>
                 </div>
+                {/* AI — same font as tagline (Garamond); position via top/right (e.g. top: '50%', right: '4.7rem') */}
+                <span
+                  className={`absolute text-5xl md:text-6xl font-[400] tracking-tight whitespace-nowrap select-none ${garamond.className}`}
+                  style={{
+                    color: '#0B4634',
+                    top: '48.8%',
+                    right: '4rem',
+                    transform: 'translateY(-50%)',
+                  }}
+                >
+                  AI
+                </span>
               </div>
             </div>
           </div>
