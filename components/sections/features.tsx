@@ -62,16 +62,6 @@ const features = [
       { src: '/innovation-lab.png', label: '' },
     ],
   },
-  {
-    icon: FileCheck,
-    title: 'ArabAudit',
-    description:
-      'Smart Audit, Secure Growth. Our audit platform delivers transparency, compliance, and clarity for your business.',
-    color: 'cyan' as const,
-    images: [
-      { src: '/arabaudit-logo.png', label: 'ArabAudit' },
-    ],
-  },
 ]
 
 export function Features() {
