@@ -11,11 +11,11 @@ const products = [
   {
     id: 'arabaudit',
     name: 'ArabAudit',
-    tagline: 'Smart Audit, Secure Growth.',
+    tagline: 'Your AI Audit Co-Pilot',
     description:
       'Your AI-powered audit co-pilot for the Saudi and Arab markets. ArabAudit streamlines internal and external audits with intelligent workflows, evidence collection, and real-time dashboards. Stay compliant with NCA (National Cybersecurity Authority) requirements, SAMA (Saudi Central Bank) regulations for financial institutions, and other GCC frameworks. We help you meet local standards, automate control testing, and produce audit-ready reports—so you get transparency, compliance, and clarity without the overhead.',
-    logo: '/arabaudit-logo.png',
-    logoAlt: 'ArabAudit — Smart Audit, Secure Growth.',
+    logo: '/arabaudit-ai-logo.png',
+    logoAlt: 'ArabAudit AI — Your AI Audit Co-Pilot',
     href: '/arabaudit.com',
     accentColor: 'green' as const,
     icon: FileCheck,
@@ -86,7 +86,7 @@ export function Products() {
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
-                  <div className="relative w-full md:w-[40%] md:flex-shrink-0 md:self-stretch flex items-center justify-center min-h-[10rem] md:min-h-0 rounded-2xl overflow-hidden bg-white/5 dark:bg-white/5">
+                  <div className="relative w-full md:w-[40%] md:flex-shrink-0 md:self-stretch flex items-center justify-center min-h-[10rem] md:min-h-0 rounded-2xl overflow-hidden" style={{ backgroundColor: '#E8F2EF' }}>
                     <div className="relative w-full h-36 md:h-[95%] max-h-full rounded-xl">
                       <Image
                         src={product.logo}
