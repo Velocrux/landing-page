@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { siteConfig } from '@/config/site'
+import { HEADER_HEIGHT_PX } from '@/lib/constants'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -18,7 +19,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     const element = document.getElementById(sectionId)
     
     if (element) {
-      const headerHeight = 80
+      const headerHeight = HEADER_HEIGHT_PX
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       const offsetPosition = elementPosition - headerHeight
 
@@ -60,15 +61,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   className="flex items-center space-x-3 group"
                   onClick={(e) => handleNavClick(e, '#home')}
                 >
-                  <div className="relative w-10 h-10 flex-shrink-0">
+                  <div className="relative w-14 h-14 flex-shrink-0">
                     <Image 
                       src="/logo.png" 
-                      alt="Velocrux Logo" 
+                      alt="Gigacrux Logo" 
                       fill
                       className="object-contain"
                     />
                   </div>
-                  <span className="text-xl font-bold text-theme-primary">
+                  <span className="text-2xl font-bold text-theme-primary tracking-tight">
                     {siteConfig.name}
                   </span>
                 </a>

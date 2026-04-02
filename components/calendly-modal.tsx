@@ -10,7 +10,7 @@ interface CalendlyModalProps {
   url?: string
 }
 
-export function CalendlyModal({ isOpen, onClose, url = 'https://calendly.com/kauser-velocrux/15min' }: CalendlyModalProps) {
+export function CalendlyModal({ isOpen, onClose, url = 'https://calendly.com/kauser-gigacrux/15min' }: CalendlyModalProps) {
   useEffect(() => {
     if (isOpen) {
       // Prevent body scroll when modal is open

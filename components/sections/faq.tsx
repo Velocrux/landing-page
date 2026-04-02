@@ -22,7 +22,7 @@ const faqCategories = [
 const faqs = [
   {
     category: 'general',
-    question: 'What services does Velocrux offer?',
+    question: 'What services does Gigacrux offer?',
     answer:
       'We specialize in custom AI solutions, rapid prototype development, digital services (consulting, system architecture, cloud deployment), and innovation lab services. We build everything from AI-powered applications to full-stack web and mobile platforms.',
   },

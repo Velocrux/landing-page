@@ -71,7 +71,7 @@ export function ProductFeatures() {
       <div className="container mx-auto px-4">
         <FadeIn className="text-center mb-20">
           <p className="text-vibrant-orange font-semibold mb-4 uppercase tracking-wider text-sm">
-            Why Velocrux
+            Why Gigacrux
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-theme-primary">
             Built on <span className="text-gradient-enhanced">Excellence</span>

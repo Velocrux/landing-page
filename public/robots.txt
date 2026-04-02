@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://velocrux.com/sitemap.xml
+Sitemap: https://gigacrux.com/sitemap.xml

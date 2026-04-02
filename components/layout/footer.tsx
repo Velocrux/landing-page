@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Github, Linkedin, Twitter, Mail, MapPin, Zap } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { HEADER_HEIGHT_PX } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -13,7 +14,7 @@ export function Footer() {
     const element = document.getElementById(sectionId)
 
     if (element) {
-      const headerHeight = 80
+      const headerHeight = HEADER_HEIGHT_PX
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       const offsetPosition = elementPosition - headerHeight
 
@@ -71,7 +72,7 @@ export function Footer() {
                 <div className="relative w-12 h-12 flex-shrink-0">
                   <Image
                     src="/logo.png"
-                    alt="Velocrux Logo"
+                    alt="Gigacrux Logo"
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-300"
                   />
@@ -88,13 +89,13 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <a
-                href="mailto:kauser@velocrux.com"
+                href="mailto:kauser.gigacrux@gmail.com"
                 className="flex items-center gap-2 text-theme-secondary-bright hover:text-electric-cyan transition-colors text-sm group"
               >
                 <div className="w-8 h-8 rounded-lg bg-electric-cyan/10 flex items-center justify-center group-hover:bg-electric-cyan/20 transition-colors">
                   <Mail size={14} className="text-electric-cyan" />
                 </div>
-                <span>kauser@velocrux.com</span>
+                <span>kauser.gigacrux@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-theme-secondary-bright text-sm">
                 <div className="w-8 h-8 rounded-lg bg-vibrant-orange/10 flex items-center justify-center">

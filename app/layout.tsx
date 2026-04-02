@@ -12,19 +12,19 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Velocrux - Innovative Software Lab | AI Solutions, Products & Services',
+  title: 'Gigacrux - Innovative Software Lab | AI Solutions, Products & Services',
   description: 'Leading software lab specializing in AI development, custom products, and digital services. Transform your ideas into powerful solutions.',
   keywords: ['software lab', 'AI development', 'custom software', 'product development', 'digital services', 'machine learning', 'web development', 'mobile apps'],
-  authors: [{ name: 'Velocrux' }],
+  authors: [{ name: 'Gigacrux' }],
   openGraph: {
-    title: 'Velocrux - Innovative Software Lab',
+    title: 'Gigacrux - Innovative Software Lab',
     description: 'AI Solutions, Products & Custom Services for modern businesses.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Velocrux - Innovative Software Lab',
+    title: 'Gigacrux - Innovative Software Lab',
     description: 'AI Solutions, Products & Custom Services for modern businesses.',
   },
 }

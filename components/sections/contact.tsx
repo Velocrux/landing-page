@@ -19,9 +19,9 @@ const contactMethods = [
     icon: Mail,
     title: 'Send Email',
     description: 'Write to us about your project',
-    action: 'kauser@velocrux.com',
+    action: 'kauser.gigacrux@gmail.com',
     color: 'cyan',
-    link: 'https://mail.google.com/mail/?view=cm&fs=1&to=kauser@velocrux.com',
+    link: 'https://mail.google.com/mail/?view=cm&fs=1&to=kauser.gigacrux@gmail.com',
   },
   {
     icon: Calendar,
@@ -73,7 +73,7 @@ export function Contact() {
         isOpen={isCalendlyOpen}
         onClose={() => setIsCalendlyOpen(false)}
       />
-      
+
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-vibrant-orange/10 rounded-full blur-3xl" />

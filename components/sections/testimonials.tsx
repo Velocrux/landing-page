@@ -9,7 +9,7 @@ import { useState } from 'react'
 const testimonials = [
   {
     quote:
-      'Velocrux delivered our education AI platform in just 6 weeks. Their expertise in the education domain and rapid prototyping approach exceeded our expectations.',
+      'Gigacrux delivered our education AI platform in just 6 weeks. Their expertise in the education domain and rapid prototyping approach exceeded our expectations.',
     name: 'Javeed Pasha',
     title: 'Managing Director, MCA',
     industry: 'Education',
@@ -34,7 +34,7 @@ const testimonials = [
   },
   {
     quote:
-      'Working with Velocrux felt like having an extended team. They understood our vision and brought it to life with cutting-edge AI technology.',
+      'Working with Gigacrux felt like having an extended team. They understood our vision and brought it to life with cutting-edge AI technology.',
     name: 'James Anderson',
     title: 'CEO, EduLearn',
     industry: 'Education',

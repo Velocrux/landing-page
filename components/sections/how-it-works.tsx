@@ -15,13 +15,13 @@ const steps = [
     number: '2',
     icon: Link2,
     title: 'Connect your apps',
-    description: 'Sync Velocrux with your tools—CRM, email, Slack, and more.',
+    description: 'Sync Gigacrux with your tools—CRM, email, Slack, and more.',
   },
   {
     number: '3',
     icon: Zap,
     title: 'Let AI do the work',
-    description: 'Lets Velocrux AI execute tasks automatically.',
+    description: 'Lets Gigacrux AI execute tasks automatically.',
   },
 ]
 

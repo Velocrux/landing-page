@@ -1,36 +1,36 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
-import { contactFormSchema } from '@/lib/validations'
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+import { contactFormSchema } from "@/lib/validations";
 
 export async function POST(request: NextRequest) {
   // Initialize Resend only when the route is called (not during build)
   if (!process.env.RESEND_API_KEY) {
     return NextResponse.json(
-      { error: 'Email service not configured' },
-      { status: 500 }
-    )
+      { error: "Email service not configured" },
+      { status: 500 },
+    );
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY)
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const body = await request.json()
+    const body = await request.json();
 
     // Validate the form data
-    const validationResult = contactFormSchema.safeParse(body)
-    
+    const validationResult = contactFormSchema.safeParse(body);
+
     if (!validationResult.success) {
       return NextResponse.json(
-        { error: 'Invalid form data', details: validationResult.error.errors },
-        { status: 400 }
-      )
+        { error: "Invalid form data", details: validationResult.error.errors },
+        { status: 400 },
+      );
     }
 
-    const { name, email, subject, message } = validationResult.data
+    const { name, email, subject, message } = validationResult.data;
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Velocrux Contact Form <onboarding@resend.dev>', // You'll update this with your verified domain
-      to: 'kauser@velocrux.com',
+      from: "Gigacrux Contact Form <onboarding@resend.dev>", // You'll update this with your verified domain
+      to: "kauser.gigacrux@gmail.com",
       replyTo: email, // This allows you to reply directly to the customer
       subject: `New Contact Form Submission: ${subject}`,
       html: `
@@ -117,13 +117,13 @@ export async function POST(request: NextRequest) {
               <div class="field">
                 <div class="field-label">Message</div>
                 <div class="message-box">
-                  ${message.replace(/\n/g, '<br>')}
+                  ${message.replace(/\n/g, "<br>")}
                 </div>
               </div>
               
               <div class="footer">
                 <p>💡 You can reply directly to this email to respond to ${name}</p>
-                <p style="font-size: 12px; color: #999;">Sent from Velocrux Contact Form</p>
+                <p style="font-size: 12px; color: #999;">Sent from Gigacrux Contact Form</p>
               </div>
             </div>
           </body>
@@ -142,25 +142,25 @@ ${message}
 ---
 You can reply directly to this email to respond to ${name}.
       `,
-    })
+    });
 
     if (error) {
-      console.error('Resend error:', error)
+      console.error("Resend error:", error);
       return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      )
+        { error: "Failed to send email" },
+        { status: 500 },
+      );
     }
 
     return NextResponse.json(
       { success: true, messageId: data?.id },
-      { status: 200 }
-    )
+      { status: 200 },
+    );
   } catch (error) {
-    console.error('Contact form error:', error)
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }

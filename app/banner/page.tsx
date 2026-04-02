@@ -14,7 +14,7 @@ export default function LinkedInBannerStatic() {
     <div className="min-h-screen bg-gradient-to-b from-black to-[#0A1628] flex flex-col items-center justify-center p-8">
       <div className="w-full max-w-[1650px] relative">
         <h1 className="text-4xl font-bold text-white mb-6 text-center">
-          LinkedIn Banner for <span className="text-gradient-enhanced">Velocrux</span>
+          LinkedIn Banner for <span className="text-gradient-enhanced">Gigacrux</span>
         </h1>
 
         {/* LinkedIn Banner 1 - 1584 x 396 */}
@@ -97,7 +97,7 @@ export default function LinkedInBannerStatic() {
                     <div className="w-8 h-8 rounded-lg bg-electric-cyan/20 flex items-center justify-center">
                       <Mail className="text-electric-cyan" size={16} />
                     </div>
-                    <span className="text-white font-semibold text-lg">kauser@velocrux.com</span>
+                    <span className="text-white font-semibold text-lg">kauser.gigacrux@gmail.com</span>
                   </div>
 
                   {/* Phone */}
@@ -115,7 +115,7 @@ export default function LinkedInBannerStatic() {
                 <div className="text-center">
                   <h2 className="text-[5rem] font-bold mb-2 leading-none">
                     <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
-                      Velocrux
+                      Gigacrux
                     </span>
                   </h2>
                   <p className="text-3xl text-electric-cyan font-bold">
@@ -125,7 +125,7 @@ export default function LinkedInBannerStatic() {
                 <div className="relative w-48 h-48 flex-shrink-0">
                   <Image
                     src="/logo.png"
-                    alt="Velocrux Logo"
+                    alt="Gigacrux Logo"
                     fill
                     className="object-contain drop-shadow-[0_0_30px_rgba(0,212,255,0.6)]"
                   />

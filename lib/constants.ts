@@ -27,6 +27,9 @@ export const COLORS = {
   },
 } as const
 
+/** Fixed header bar height in px — keep in sync with `h-24` in `components/layout/header.tsx` */
+export const HEADER_HEIGHT_PX = 96
+
 // Animation Timing Constants
 export const ANIMATION_TIMING = {
   microInteraction: 150,

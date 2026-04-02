@@ -116,7 +116,7 @@ export function Features() {
             AI powered solutions for every industry
           </p>
           <p className="text-theme-secondary-bright text-lg max-w-2xl mx-auto">
-            Velocrux combines deep technical expertise with innovative thinking to deliver
+            Gigacrux combines deep technical expertise with innovative thinking to deliver
             solutions that transform businesses and drive growth.
           </p>
         </FadeIn>

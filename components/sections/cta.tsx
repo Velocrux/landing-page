@@ -25,7 +25,7 @@ export function CTA() {
 
           <FadeIn delay={0.2}>
             <p className="text-lg md:text-xl text-neutral-light-gray mb-10 max-w-2xl mx-auto">
-              Sign up for Velocrux and let AI handle your routine tasks—no credit
+              Sign up for Gigacrux and let AI handle your routine tasks—no credit
               card needed.
             </p>
           </FadeIn>

@@ -213,7 +213,7 @@ export function Hero() {
                     asChild
                   >
                     <a
-                      href="https://calendly.com/kauser-velocrux/30min"
+                      href="https://calendly.com/kauser-gigacrux/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

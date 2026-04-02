@@ -205,7 +205,7 @@ export function ContactForm() {
       {error && (
         <div className="p-4 rounded-xl bg-gradient-to-r from-red-500/10 to-red-600/10 border border-red-500/30 backdrop-blur-sm">
           <p className="text-red-400 font-medium text-center text-sm">
-            ⚠️ {error}. Please try again or email us directly at kauser@velocrux.com
+            ⚠️ {error}. Please try again or email us directly at kauser.gigacrux@gmail.com
           </p>
         </div>
       )}

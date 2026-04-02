@@ -1,8 +1,8 @@
-# Velocrux - AI Workflow Automation Platform
+# Gigacrux - AI Workflow Automation Platform
 
 A modern, high-performance website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features advanced animations, AI-powered automation workflows, and seamless integrations with popular business tools.
 
-![Velocrux](https://via.placeholder.com/1200x630/0A1628/00A3FF?text=Velocrux+-+AI+Automation)
+![Gigacrux](https://via.placeholder.com/1200x630/0A1628/00A3FF?text=Gigacrux+-+AI+Automation)
 
 ## ✨ Features
 
@@ -31,7 +31,7 @@ A modern, high-performance website built with Next.js 14, TypeScript, Tailwind C
 ## 📦 Project Structure
 
 ```
-velocrux/
+gigacrux/
 ├── app/                    # Next.js app directory
 │   ├── about/             # About page
 │   ├── pricing/           # Pricing page
@@ -69,8 +69,8 @@ velocrux/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/velocrux.git
-cd velocrux
+git clone https://github.com/yourusername/gigacrux.git
+cd gigacrux
 ```
 
 2. **Install dependencies**
@@ -156,7 +156,7 @@ Follow the guide in `CONTENTFUL_SETUP.md` to set up your Contentful space with t
 3. Add environment variables in Vercel dashboard
 4. Deploy!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/velocrux)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/gigacrux)
 
 ## 📈 Performance
 
@@ -190,8 +190,8 @@ This project is licensed under the MIT License.
 
 ## 📞 Support
 
-For support, email support@velocrux.com or join our community forum.
+For support, email support@gigacrux.com or join our community forum.
 
 ---
 
-**Made with ❤️ by the Velocrux Team**
+**Made with ❤️ by the Gigacrux Team**
