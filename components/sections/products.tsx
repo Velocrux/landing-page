@@ -13,10 +13,10 @@ const products = [
     name: 'ArabAudit',
     tagline: 'Your AI Audit Co-Pilot',
     description:
-      'ArabAudit is the "Digital Co-Pilot" designed to move Saudi companies from audit panic to audit readiness 24/7. We replace messy Excel sheets and manual evidence hunting with an AI-powered platform pre-configured for NCA ECC-2024 and SAMA frameworks. Our AI Pre-Auditor automatically maps your technical logs and screenshots to 300+ controls, flagging gaps before the external auditor even arrives.',
+      'ArabAudit is a Saudi-native AI-powered audit compliance platform built for Kingdom regulatory frameworks. It replaces messy Excel sheets and manual evidence hunting with an AI engine pre-configured for NCA ECC-2024, SAMA CSF, SDAIA/PDPL, and CBAHI healthcare accreditation. Features include one-click export to official NCA and SAMA formats, AI-assisted evidence validation, a real-time bilingual Audit Copilot (Arabic & English), cryptographically signed immutable audit records, and cross-framework evidence reuse across 300+ controls.',
     logo: '/arabaudit-ai-logo.png',
     logoAlt: 'ArabAudit AI — Your AI Audit Co-Pilot',
-    href: '/arabaudit.com',
+    href: 'https://arabaudit.com',
     accentColor: 'green' as const,
     icon: FileCheck,
   },
@@ -49,6 +49,8 @@ export function Products() {
             >
               <Link
                 href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   'group block h-full overflow-hidden',
                   'rounded-3xl md:rounded-[1.75rem]',
