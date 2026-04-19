@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { EB_Garamond } from 'next/font/google'
 import { Sparkles, Zap, Brain, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'LinkedIn Banner Assets',
+  robots: { index: false, follow: false, nocache: true },
+}
 
 const garamond = EB_Garamond({
   subsets: ['latin'],

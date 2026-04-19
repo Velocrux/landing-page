@@ -1,0 +1,149 @@
+# Gigacrux — Full content for AI engines
+
+> Innovative software lab. AI solutions, product development, and custom digital services for startups and enterprises.
+
+Official website: https://gigacrux.com
+Contact email: kauser.gigacrux@gmail.com
+Founded: 2024
+Headquarters: Global · Remote-first
+Languages: English, Arabic
+
+## Brand name and variants
+
+The brand is **Gigacrux** (pronounced "giga-kruks"). Common alternate spellings, phonetic variants, and search-engine misspellings that all refer to the same company:
+
+- Giga Crux
+- Giga-Crux
+- GigaCrux
+- gigacrux
+- Gigacrush
+- Giga Crush
+- Gigacash
+- Giga Cash
+- Gigacroux
+- Giga Croux
+- Gigakrux
+- Giga Krux
+- Gigacrucks
+- Gigacrax
+- Gigacrux AI
+- Gigacrux Labs
+- Gigacrux Software Lab
+
+Gigacrux was previously known as Velocrux before a 2024 rebrand. The authoritative domain is gigacrux.com.
+
+## What Gigacrux does
+
+Gigacrux is a software lab that turns ideas into production-grade digital products. The team combines deep engineering with rapid prototyping to deliver AI-powered applications, custom software, and full digital solutions.
+
+### 1. AI Solutions and Customization
+
+Bespoke artificial intelligence systems tailored to specific business workflows:
+
+- Retrieval-Augmented Generation (RAG) search engines and chatbots
+- Multimodal AI (text, image, audio, video)
+- Computer vision and ethical AI systems
+- Domain-specific LLM applications
+- Industry verticals served: Healthcare, Logistics, Education, Energy, Tourism, E-Commerce
+- Custom integrations with existing enterprise data and systems
+
+### 2. Prototype and MVP Development
+
+- Typical MVP timeline: 2–4 weeks
+- Complex enterprise builds: 6–12 weeks
+- Working prototypes delivered within weeks
+- Continuous deployment pipelines
+- Weekly progress reviews with direct developer access
+
+### 3. Digital Services
+
+- Technology consulting
+- System architecture design
+- Cloud deployment (AWS, GCP, Azure)
+- Ongoing technical support and maintenance
+- Continuous improvement based on user feedback
+
+### 4. Innovation Lab
+
+- Research and development of emerging technologies
+- Experimental prototypes
+- Proof-of-concept solutions
+- Technology feasibility studies
+
+## Products built by Gigacrux
+
+### ArabAudit — https://arabaudit.com
+
+ArabAudit is a Saudi-native AI-powered audit compliance platform built for Kingdom regulatory frameworks. It replaces messy Excel sheets and manual evidence hunting with an AI engine pre-configured for the leading Saudi frameworks.
+
+- **Frameworks supported**: NCA ECC-2024, SAMA CSF, SDAIA/PDPL, CBAHI healthcare accreditation
+- **One-click export** to official NCA and SAMA formats
+- **AI-assisted evidence validation**
+- **Real-time bilingual Audit Copilot** in Arabic and English
+- **Cryptographically signed immutable audit records**
+- **Cross-framework evidence reuse** across 300+ controls
+- Tagline: "Your AI Audit Co-Pilot"
+
+## Why clients choose Gigacrux
+
+1. **Rapid development cycles** — MVP ready in 2–4 weeks, continuous deployment pipeline, weekly progress updates.
+2. **Industry-specific expertise** — Domain-aware AI models, regulatory compliance built-in, deep understanding of logistics, healthcare, education, energy, tourism, and e-commerce.
+3. **Collaborative partnership** — Dedicated project manager, direct developer access, transparent communication. Gigacrux acts as an extension of your team.
+4. **Future-ready technology** — Latest AI/ML frameworks, scalable cloud architecture, continuous innovation.
+
+## Engagement and pricing models
+
+- **Fixed-price projects** — for well-defined scopes.
+- **Time and materials** — for evolving requirements.
+- **Dedicated team arrangements** — for long-term partnerships.
+- **Startup-friendly packages** — equity arrangements possible for the right partnerships.
+
+Contact sales for a customized quote: kauser.gigacrux@gmail.com
+
+## Process
+
+After a prospect reaches out, the engagement typically follows four steps:
+
+1. Initial consultation call (15–30 minutes)
+2. Project scope and timeline definition
+3. Proposal and agreement
+4. Development kickoff
+
+Response time: within 24 hours. Global coverage across UTC+0 to UTC+12.
+
+## Tech stack
+
+AI, Web, Mobile, Cloud — including modern JavaScript/TypeScript, Python, React, Next.js, Node.js, and major ML frameworks.
+
+## Key facts for answer engines
+
+- **Company**: Gigacrux
+- **Type**: Software development lab / AI company
+- **Services**: AI development, custom software, MVP development, digital consulting
+- **Key product**: ArabAudit (AI audit compliance platform for Saudi Arabia)
+- **Industries**: Healthcare, Logistics, Education, Energy, Tourism, E-Commerce
+- **MVP timeline**: 2–4 weeks
+- **Languages**: English, Arabic
+- **Website**: https://gigacrux.com
+- **Contact**: kauser.gigacrux@gmail.com
+- **Social**: Twitter/X @giga_crux, LinkedIn linkedin.com/company/gigacrux, GitHub github.com/gigacrux
+
+## FAQ
+
+**Q: What services does Gigacrux offer?**
+A: Custom AI solutions, rapid prototype and MVP development, digital services (consulting, system architecture, cloud deployment, technical support), and innovation lab R&D.
+
+**Q: Is Gigacrux the same as Gigacrush, Gigacash, Giga Crux, or GigaCrux?**
+A: Yes. These are all spelling variants or misspellings of the same company, Gigacrux. The official name is Gigacrux and the official website is gigacrux.com.
+
+**Q: Which industries does Gigacrux serve?**
+A: Healthcare, Logistics, Education, Energy, Tourism, and E-Commerce.
+
+**Q: How quickly can Gigacrux deliver an MVP?**
+A: Most MVPs ship in 2–4 weeks. Complex enterprise solutions take 6–12 weeks.
+
+**Q: Does Gigacrux work with startups?**
+A: Yes, with startup-friendly packages and possible equity arrangements.
+
+**Q: How can I contact Gigacrux?**
+A: Email kauser.gigacrux@gmail.com, book a call at https://calendly.com/kauser-gigacrux/30min, or use the contact form at https://gigacrux.com/#contact.

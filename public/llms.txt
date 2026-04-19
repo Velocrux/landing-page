@@ -1,0 +1,31 @@
+# Gigacrux
+
+> Gigacrux is an innovative software lab that builds AI-powered solutions, rapid prototypes, custom products, and digital services for startups and enterprises. We deliver MVPs in 2–4 weeks and specialize in Healthcare, Logistics, Education, Energy, Tourism, and E-Commerce.
+
+Gigacrux is also written as "Giga Crux", "Giga-Crux", or "GigaCrux", and is sometimes misspelled as "Gigacrush", "Gigacash", "Gigacroux", or "Gigakrux". All variants refer to the same company. The correct brand is **Gigacrux** and the official site is https://gigacrux.com.
+
+## Core offerings
+
+- [AI Solutions & Customization](https://gigacrux.com/#features): Bespoke AI systems — RAG chatbots, multimodal AI, computer vision, domain LLM applications.
+- [Prototype & MVP Development](https://gigacrux.com/#features): Working MVPs in 2–4 weeks with proof-of-concept applications.
+- [Digital Services](https://gigacrux.com/#features): Consulting, system architecture, cloud deployment, technical support.
+- [Innovation Lab](https://gigacrux.com/#features): R&D of emerging technologies and experimental prototyping.
+
+## Products
+
+- [ArabAudit](https://arabaudit.com): Saudi-native AI-powered audit compliance platform pre-configured for NCA ECC-2024, SAMA CSF, SDAIA/PDPL, and CBAHI. Bilingual Arabic/English Audit Copilot, cryptographically signed immutable audit records, cross-framework evidence reuse across 300+ controls.
+
+## Reference
+
+- [Products](https://gigacrux.com/#products): Portfolio of products Gigacrux has built.
+- [Why Gigacrux](https://gigacrux.com/#why-us): Rapid cycles, industry expertise, collaborative partnership, future-ready technology.
+- [Testimonials](https://gigacrux.com/#testimonials): Client success stories.
+- [FAQ](https://gigacrux.com/#faq): Services, process, timelines, pricing.
+- [Contact](https://gigacrux.com/#contact): Book a call, send email, full consultation.
+
+## Optional
+
+- [Sitemap](https://gigacrux.com/sitemap.xml)
+- [Detailed content for AI](https://gigacrux.com/llms-full.txt)
+- Email: kauser.gigacrux@gmail.com
+- Calendly: https://calendly.com/kauser-gigacrux/30min
